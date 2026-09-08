@@ -84,7 +84,7 @@
       {n:3,  r:.12, sp: .22, col:'#E2563C', from:.10,
        labels:['GPT','Claude','Gemini']},
       {n:6,  r:.21, sp:-.14, col:'#6E9BFF', from:.20,
-       labels:['n8n','Zapier','Copilot','NotebookLM','Studio','API']},
+       labels:['n8n','Zapier','Copilot','Notebook','Studio','API']},
       {n:10, r:.31, sp: .09, col:'#A9C4FF', from:.42,
        labels:['CRM','Drive','Mail','ERP','Docs','Slack','DB','Sheets','Tickets','Calendar']},
       {n:14, r:.42, sp:-.05, col:'#4A5D7A'}
