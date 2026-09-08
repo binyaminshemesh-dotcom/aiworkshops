@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>סדנת Claude Code | AI Workshops Israel</title>
+<meta name="description" content="סדנת יום בת שש שעות ב-Claude Code: עבודה עם סוכן על קבצים, מסמכים ומאגרי קוד — כולל CLAUDE.md, סקילים, סוכני משנה, hooks, MCP והרשאות ארגוניות.">
+<link rel="canonical" href="https://aiworkshops.co.il/claude-code-workshop">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#0B1730">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="he_IL">
+<meta property="og:site_name" content="AI Workshops Israel">
+<meta property="og:url" content="https://aiworkshops.co.il/claude-code-workshop">
+<meta property="og:title" content="סדנת Claude Code | AI Workshops Israel">
+<meta property="og:description" content="סדנת יום בת שש שעות ב-Claude Code: עבודה עם סוכן על קבצים, מסמכים ומאגרי קוד — כולל CLAUDE.md, סקילים, סוכני משנה, hooks, MCP והרשאות ארגוניות.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400..900&family=Space+Grotesk:wght@500;700&display=swap">
+<link rel="stylesheet" href="/site.css">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://aiworkshops.co.il/#org", "name": "AI Workshops Israel", "url": "https://aiworkshops.co.il/", "telephone": "+972-54-445-6795", "areaServed": {"@type": "Country", "name": "IL"}}, {"@type": "Course", "name": "סדנת Claude Code", "description": "סדנת יום בת שש שעות ב-Claude Code: עבודה עם סוכן על קבצים, מסמכים ומאגרי קוד — כולל CLAUDE.md, סקילים, סוכני משנה, hooks, MCP והרשאות ארגוניות.", "url": "https://aiworkshops.co.il/claude-code-workshop", "provider": {"@id": "https://aiworkshops.co.il/#org"}, "inLanguage": "he", "teaches": "עבודה מעשית ב-Claude Code: הלולאה האג׳נטית, מצב תכנון והרשאות, זיכרון פרויקט ב-CLAUDE.md, סקילים, סוכני משנה, hooks, חיבור MCP והגדרות ארגוניות.", "hasCourseInstance": {"@type": "CourseInstance", "courseMode": ["onsite", "online"], "courseWorkload": "PT6H", "location": {"@type": "Place", "name": "במשרדי הארגון או אונליין", "address": {"@type": "PostalAddress", "addressCountry": "IL"}}}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "צריך להיות מפתח?", "acceptedAnswer": {"@type": "Answer", "text": "לא בהכרח. נדרשת נוחות בסיסית בטרמינל, אבל חצי מהתרגול נוגע לקבצים, למסמכים ולנתונים ולא לקוד. אנליסטים שמריצים סקריפטים ומעבדים קבצים מוצאים בזה ערך מיידי. מה שכן — אם אף אחד בחדר לא פתח טרמינל מעולם, עדיף להתחיל בסדנה אחרת."}}, {"@type": "Question", "name": "למה יום שלם ולא שלוש שעות?", "acceptedAnswer": {"@type": "Answer", "text": "כי הכלי נוגע בקבצים ומריץ פקודות, ולכן חצי מהערך נמצא בשכבה שמסדירה אותו: מצב תכנון, הרשאות, CLAUDE.md וכללים משותפים לצוות. בשלוש שעות מספיקים להראות יכולות — לא לצאת עם סביבה מוגדרת."}}, {"@type": "Question", "name": "זה בטוח? הוא עורך קבצים ומריץ פקודות.", "acceptedAnswer": {"@type": "Answer", "text": "זה בדיוק מה שהסדנה מסדירה. יש מצב תכנון שבו הוא מציג מה בכוונתו לעשות לפני שהוא נוגע בדיסק, יש נקודות שחזור שמאפשרות לחזור אחורה, ויש מצבי הרשאה שקובעים מתי הוא שואל ומתי לא. ברמת הארגון אפשר לאכוף רשימות היתר ובידוד — נעבור על זה בשעה האחרונה."}}, {"@type": "Question", "name": "מה ההבדל מ-GitHub Copilot?", "acceptedAnswer": {"@type": "Answer", "text": "Copilot חזק בהשלמת קוד בתוך הקובץ שאתם כותבים. Claude Code עובד ברמת המשימה: הוא קורא כמה קבצים, מריץ בדיקות, מתקן לפי הפלט ועובד מול git. אלה שני שימושים שונים, והרבה צוותים מחזיקים את שניהם. אנחנו לא משווקים של אף אחד מהם."}}, {"@type": "Question", "name": "נצטרך לחשוף את הקוד שלנו?", "acceptedAnswer": {"@type": "Answer", "text": "הכלי רץ אצלכם ועובד על הקבצים שאתם נותנים לו גישה אליהם. מדיניות שמירת המידע והאימון משתנה בין סוגי חשבונות ותוכניות, ולכן אנחנו מבררים את זה במיפוי מול המצב הספציפי שלכם ומסכמים בכתב לפני המפגש."}}, {"@type": "Question", "name": "מה עם MCP — צריך את זה?", "acceptedAnswer": {"@type": "Answer", "text": "לא ביום הראשון. MCP הוא חיבור למערכות חיצוניות, והוא הופך לרלוונטי כשרוצים שהסוכן יגיע למערכת פניות, למאגר נתונים או לשירות פנימי. בסדנה נציג אותו ונחבר חיבור אחד אם יש לכם מועמד ברור."}}, {"@type": "Question", "name": "אנחנו צוות של שניים. שווה?", "acceptedAnswer": {"@type": "Answer", "text": "כן, ואולי דווקא יותר — בצוות קטן אין מי שיכתוב סטנדרטים, ו-CLAUDE.md ממלא בדיוק את התפקיד הזה. בקבוצות קטנות מאוד אפשר גם לקצר לחצי יום; נדבר על זה במיפוי."}}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "בית", "item": "https://aiworkshops.co.il/"}, {"@type": "ListItem", "position": 2, "name": "סדנאות", "item": "https://aiworkshops.co.il/workshops"}, {"@type": "ListItem", "position": 3, "name": "סדנת Claude Code", "item": "https://aiworkshops.co.il/claude-code-workshop"}]}]}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">דילוג לתוכן</a>
+<header class="bar" id="bar">
+  <a class="brand" href="/">
+    <svg class="brand-mark" viewBox="0 0 24 24" fill="none" stroke="#E2563C" stroke-width="1.6" aria-hidden="true">
+      <rect x="4" y="8" width="16" height="12" rx="2"/><path d="M12 8V4"/><circle cx="12" cy="3" r="1.4"/>
+      <path d="M9 13h.01M15 13h.01M9.5 16.5h5"/>
+    </svg>
+    AI Workshops Israel
+  </a>
+  <button class="burger" id="burger" aria-label="תפריט" aria-expanded="false" aria-controls="menu">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <nav id="menu">
+    <a href="/workshops">סדנאות</a>
+    <a href="/tools">הכלים</a>
+    <a href="/#reviews">ביקורות</a>
+    <a href="https://wa.me/972544456795?text=%D7%94%D7%99%D7%99%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%20AI%20Workshops%20Israel" target="_blank" rel="noopener">וואטסאפ</a>
+  </nav>
+</header>
+<a class="wafab" href="https://wa.me/972544456795?text=%D7%94%D7%99%D7%99%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%20AI%20Workshops%20Israel%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%93%D7%91%D7%A8%20%D7%A2%D7%9C%20%D7%94%D7%98%D7%9E%D7%A2%D7%AA%20AI%20%D7%91%D7%90%D7%A8%D7%92%D7%95%D7%9F" target="_blank" rel="noopener" aria-label="לדבר איתנו בוואטסאפ">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.8 1.2 3c.2.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3Z"/><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>
+  <span class="wafab__tip">לדבר בוואטסאפ</span>
+</a>
+
+<nav class="crumbs" aria-label="פירורי לחם" id="top">
+  <ol>
+    <li><a href="/">בית</a></li>
+    <li aria-hidden="true">←</li>
+    <li><a href="/workshops">סדנאות</a></li>
+    <li aria-hidden="true">←</li>
+    <li>סדנת Claude Code</li>
+  </ol>
+</nav>
+
+<main id="main">
+
+<section class="phero">
+  <div class="wrap">
+    <p class="eyebrow">סדנת יום · שש שעות</p>
+    <h1>סדנת Claude Code</h1>
+    <p class="lede">סדנת יום בת שש שעות ב-Claude Code — הכלי שבו סוכן עובד ישירות על הקבצים, המסמכים ומאגרי הקוד שלכם, ולא בתוך חלון צ׳אט. מיועדת לצוותי פיתוח, לאנליסטים ולמי שכבר עבר את שלב הצ׳אט ומחפש את המדרגה הבאה. עובדים על מאגר או תיקייה אמיתיים שלכם, לא על פרויקט הדגמה.</p>
+    <div class="outcome"><b>מה יוצא מזה</b>כל משתתף יוצא עם סביבה מוגדרת על הפרויקט שלו — CLAUDE.md כתוב, סקיל אחד או שניים שהצוות ישתמש בהם, וזרימת עבודה מוסכמת של תכנון לפני ביצוע.</div>
+    <div class="chips"><span class="chip"><b>6</b> שעות</span><span class="chip">יום מלא</span><span class="chip">על הקוד שלכם</span><span class="chip">כולל הרשאות ארגוניות</span></div>
+    <div class="ctas">
+      <a class="btn btn-solid" href="https://wa.me/972544456795?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%A1%D7%93%D7%A0%D7%AA%20Claude%20Code" target="_blank" rel="noopener">לתאם את הסדנה</a>
+      <a class="btn btn-ghost" href="#syllabus">מה עושים בשלוש השעות</a>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">רקע</p>
+    <h2>ההבדל בין לשאול על קוד לבין לעבוד עליו</h2>
+    <p style="color:var(--concrete-2);margin-block-start:1.1rem;max-width:64ch">רוב האנשים שמשתמשים ב-AI לקוד עושים את זה בהעתק־הדבק: מעתיקים קטע לצ׳אט, מקבלים תשובה, מדביקים חזרה. זה עובד, וזה נשבר ברגע שהמשימה נוגעת ביותר מקובץ אחד — כי המודל לא ראה את שאר הפרויקט, לא הריץ את הבדיקות, ולא יודע מה נשבר.</p>
+    <p style="color:var(--concrete-2);margin-block-start:1.1rem;max-width:64ch"><b style="color:var(--concrete)">Claude Code</b> עובד אחרת. הוא רץ אצלכם — בטרמינל, בתוך VS Code או JetBrains, או בדפדפן — ופועל בלולאה: אוסף הקשר מהפרויקט, מבצע פעולה, ומאמת את התוצאה, שוב ושוב עד שהמשימה נסגרת. הוא קורא קבצים, עורך אותם, מריץ פקודות ובדיקות, ועובד מול git. אתם יכולים לעצור אותו באמצע ולכוון מחדש בכל רגע.</p>
+    <p style="color:var(--concrete-2);margin-block-start:1.1rem;max-width:64ch">וזו בדיוק הסיבה שהסדנה היא יום ולא שלוש שעות: היכולת לגעת בקבצים ולהריץ פקודות היא גם החוזק וגם מה שמחייב הגדרה. חצי מהיום מוקדש ליכולות, וחצי לשכבה שהופכת אותן לבטוחות ולעקביות בצוות — מצב תכנון, הרשאות, זיכרון פרויקט וכללים משותפים.</p>
+  </div>
+</section>
+
+<section class="band band--alt" id="syllabus">
+  <div class="wrap">
+    <p class="eyebrow">מבנה הסדנה</p>
+    <h2>מה עושים בפועל</h2>
+    <p style="color:var(--concrete-2);margin-block-start:1.1rem;max-width:62ch">שלוש שעות מחולקות לשלושה חלקים. בכל חלק יש הסבר קצר ואחריו תרגול על חומר אמיתי שלכם — לא הרצאה של שלוש שעות עם תרגיל בסוף.</p>
+    <div class="syl">
+      <div class="syl__item">
+        <div>
+          <h3><span>שעה 1</span>הלולאה ומצב תכנון</h3>
+          <ul><li>התקנה והפעלה על מאגר או תיקייה אמיתיים שלכם</li><li>איך הסוכן אוסף הקשר: מה הוא קורא, ומה כדאי לומר לו מראש</li><li>מצב תכנון: לראות מה הוא מתכוון לעשות לפני שהוא נוגע בדיסק</li><li>נקודות שחזור — ואיך חוזרים אחורה כשמשהו יצא לא כמצופה</li></ul>
+        </div>
+      </div>
+      <div class="syl__item">
+        <div>
+          <h3><span>שעות 2–3</span>עבודה אמיתית</h3>
+          <ul><li>משימה שנוגעת בכמה קבצים, מקצה לקצה</li><li>הרצת בדיקות ופקודות: הסוכן רואה את הפלט ומתקן לפי זה</li><li>עבודה מול git: ענף, קומיט, קריאת היסטוריה ופתיחת PR</li><li>עבודה על מסמכים ונתונים — Markdown, CSV, JSON — לא רק קוד</li></ul>
+        </div>
+      </div>
+      <div class="syl__item">
+        <div>
+          <h3><span>שעה 4</span>הזיכרון והכללים</h3>
+          <ul><li>CLAUDE.md: קובץ הזיכרון של הפרויקט — מוסכמות, פקודות בנייה, כללי סקירה</li><li>רמות: אישי, פרויקט משותף בגיט, ומה שנשאר מקומי בלבד</li><li>למה קובץ אחד טוב חוסך יותר זמן מכל טריק אחר בסדנה</li></ul>
+        </div>
+      </div>
+      <div class="syl__item">
+        <div>
+          <h3><span>שעות 5–6</span>הרחבה, סוכני משנה ומערכות</h3>
+          <ul><li>סקילים ופקודות: הפיכת תהליך שחוזר לפקודה אחת שהצוות מריץ</li><li>סוכני משנה: הרצת משימות במקביל בלי לזהם את ההקשר הראשי</li><li>Hooks: פעולות שרצות תמיד באירועים מוגדרים, ולא לפי שיקול דעת המודל</li><li>חיבור MCP למערכות שלכם, והגדרות ארגוניות שה-IT יכול לאכוף</li></ul>
+        </div>
+      </div></div>
+    <p class="syl__opt"><b>לפני המפגש:</b> מבררים על איזה מאגר או תיקייה נעבוד, איזו סביבת פיתוח בשימוש, ומה מדיניות המידע שלכם. בנוסף מוודאים עם ה-IT שההתקנה וההרשאות מאושרות — בלי זה מבזבזים את השעה הראשונה על תקלות.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">דוגמאות</p>
+    <h2>ארבעה דברים שנבנים ביום עצמו</h2>
+    <p style="color:var(--concrete-2);margin-block-start:1.1rem;max-width:62ch">אלה דוגמאות מסדנאות קודמות. אצלכם הן ייראו אחרת, כי הן נבנות על התהליכים שעולים במיפוי שלפני המפגש.</p>
+    <div class="grid"><div class="cell"><span class="tag">זיכרון</span><h3>CLAUDE.md לפרויקט</h3><p>המוסכמות, פקודות הבנייה וכללי הסקירה של הצוות — בקובץ אחד שנכנס לגיט ועובד לכל מי שמושך את הפרויקט.</p><span class="len">שעה 4</span></div><div class="cell"><span class="tag">סקיל</span><h3>תהליך חוזר בפקודה אחת</h3><p>סקירת קוד לפי הצ׳קליסט שלכם, כתיבת בדיקות בפורמט שלכם, או הכנת תיאור PR. נכתב פעם אחת, רץ אצל כולם.</p><span class="len">שעות 5–6</span></div><div class="cell"><span class="tag">אנליסטים</span><h3>עבודה על קבצים ונתונים</h3><p>סקריפט שמעבד CSV, עיבוד לוגים, או תחזוקת תיעוד — החלק שמוכיח לאנליסטים שזה לא כלי לפיתוח בלבד.</p><span class="len">שעות 2–3</span></div></div>
+  </div>
+</section>
+
+<section class="band band--alt">
+  <div class="wrap">
+    <p class="eyebrow">הפרטים</p>
+    <h2>מה שכדאי לדעת מראש</h2>
+    <p style="color:var(--concrete-2);margin-block-start:1.1rem;max-width:62ch">כל מה שנשאלים לפני שסוגרים תאריך, במקום אחד. אם משהו כאן לא מתאים לכם — אפשר להתאים, ונאמר את זה בשיחה.</p>
+    <dl class="facts"><div><dt>פורמט</dt><dd><b>יום · 6 שעות</b>פרונטלי או אונליין</dd></div><div><dt>קהל</dt><dd><b>פיתוח ואנליסטים</b>ומי שעבר את שלב הצ׳אט</dd></div><div><dt>דרישות קדם</dt><dd><b>נוחות בטרמינל</b>לא נדרש ניסיון בכלי עצמו</dd></div><div><dt>התקנה</dt><dd><b>מראש, מול ה-IT</b>חלק מהמיפוי שלפני</dd></div><div><dt>חומרים</dt><dd><b>מאגר אמיתי</b>לא פרויקט הדגמה</dd></div><div><dt>תוצר</dt><dd><b>סביבה מוגדרת</b>CLAUDE.md, סקילים וזרימת עבודה</dd></div></dl>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">שכבות ההרחבה</p>
+    <h2>חמש דרכים להרחיב — ומתי כל אחת</h2>
+    <div class="tbl-scroll">
+      <table>
+        <caption>ההבחנה בין השכבות האלה היא החלק שהכי מבלבל בהתחלה, ולכן היא מקבלת חצי יום. הפרטים משתנים בין גרסאות — בסדנה עובדים מול מה שמותקן אצלכם.</caption>
+        <thead><tr><th scope="col">השכבה</th><th scope="col">מה זה</th><th scope="col">מתי משתמשים</th></tr></thead>
+        <tbody><tr><th scope="row">CLAUDE.md</th><td>קובץ זיכרון של הפרויקט שנטען בתחילת עבודה</td><td>מוסכמות, פקודות בנייה וכללים שתמיד רלוונטיים</td></tr><tr><th scope="row">סקילים ופקודות</th><td>הוראות ארוזות שמופעלות בפקודה, או לפי הקשר</td><td>תהליך שחוזר: סקירה, בדיקות, תיאור PR</td></tr><tr><th scope="row">סוכני משנה</th><td>סשן נפרד עם הקשר משלו שמחזיר סיכום</td><td>מחקר או סקירה שלא צריכים למלא את ההקשר הראשי</td></tr><tr><th scope="row">Hooks</th><td>פקודות שרצות אוטומטית באירועים מוגדרים</td><td>כשחייבים שמשהו יקרה תמיד — פורמט, בדיקה, חסימה</td></tr><tr><th scope="row">MCP</th><td>חיבור למערכות וכלים חיצוניים בפרוטוקול פתוח</td><td>גישה למערכת פניות, למאגר או לשירות פנימי</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="band band--alt">
+  <div class="wrap">
+    <p class="eyebrow">למי זה מתאים</p>
+    <h2>למי הסדנה הזאת</h2>
+    <p style="color:var(--concrete-2);margin-block-start:1.1rem;max-width:62ch">הסדנה עובדת הכי טוב כשבחדר יושבים אנשים שחולקים את אותם תהליכים. אלה הקבוצות שרואות ממנה הכי הרבה:</p>
+    <div class="aud">
+      <ul><li>צוותי פיתוח שכבר משתמשים ב-AI בהעתק־הדבק ורוצים לעבור לעבודה על הפרויקט</li><li>אנליסטים ואנשי דאטה שעובדים עם קבצים, סקריפטים ונתונים</li><li>ארגונים שרוצים סטנדרט אחד לצוות במקום שכל אחד יעבוד אחרת</li><li>צוותי IT שנדרשים לאשר את הכלי ורוצים להבין מה בדיוק הוא עושה</li></ul>
+      <div class="note">
+        <h3>מה ה-IT צריך לדעת</h3>
+        <p>Claude Code רץ עם ההרשאות של מי שמפעיל אותו, ולכן ארגונים יכולים להגדיר מראש מה מותר: רשימות היתר לכלים ולפקודות, הגבלת חיבורי MCP, מצב הרשאות התחלתי, ובידוד ברמת מערכת ההפעלה.</p>
+        <p>ההגדרות האלה נאכפות ברמת הארגון ולא תלויות בכך שכל מפתח יזכור להגדיר נכון. בשעה האחרונה נעבור עליהן, ועדיף שנציג IT יהיה בחדר.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="faq">
+  <div class="wrap">
+    <p class="eyebrow">שאלות שחוזרות</p>
+    <h2>על סדנת Claude Code</h2>
+    <div class="qa"><details open><summary>צריך להיות מפתח?</summary><div class="ans">לא בהכרח. נדרשת נוחות בסיסית בטרמינל, אבל חצי מהתרגול נוגע לקבצים, למסמכים ולנתונים ולא לקוד. אנליסטים שמריצים סקריפטים ומעבדים קבצים מוצאים בזה ערך מיידי. מה שכן — אם אף אחד בחדר לא פתח טרמינל מעולם, עדיף להתחיל בסדנה אחרת.</div></details><details><summary>למה יום שלם ולא שלוש שעות?</summary><div class="ans">כי הכלי נוגע בקבצים ומריץ פקודות, ולכן חצי מהערך נמצא בשכבה שמסדירה אותו: מצב תכנון, הרשאות, CLAUDE.md וכללים משותפים לצוות. בשלוש שעות מספיקים להראות יכולות — לא לצאת עם סביבה מוגדרת.</div></details><details><summary>זה בטוח? הוא עורך קבצים ומריץ פקודות.</summary><div class="ans">זה בדיוק מה שהסדנה מסדירה. יש מצב תכנון שבו הוא מציג מה בכוונתו לעשות לפני שהוא נוגע בדיסק, יש נקודות שחזור שמאפשרות לחזור אחורה, ויש מצבי הרשאה שקובעים מתי הוא שואל ומתי לא. ברמת הארגון אפשר לאכוף רשימות היתר ובידוד — נעבור על זה בשעה האחרונה.</div></details><details><summary>מה ההבדל מ-GitHub Copilot?</summary><div class="ans">Copilot חזק בהשלמת קוד בתוך הקובץ שאתם כותבים. Claude Code עובד ברמת המשימה: הוא קורא כמה קבצים, מריץ בדיקות, מתקן לפי הפלט ועובד מול git. אלה שני שימושים שונים, והרבה צוותים מחזיקים את שניהם. אנחנו לא משווקים של אף אחד מהם.</div></details><details><summary>נצטרך לחשוף את הקוד שלנו?</summary><div class="ans">הכלי רץ אצלכם ועובד על הקבצים שאתם נותנים לו גישה אליהם. מדיניות שמירת המידע והאימון משתנה בין סוגי חשבונות ותוכניות, ולכן אנחנו מבררים את זה במיפוי מול המצב הספציפי שלכם ומסכמים בכתב לפני המפגש.</div></details><details><summary>מה עם MCP — צריך את זה?</summary><div class="ans">לא ביום הראשון. MCP הוא חיבור למערכות חיצוניות, והוא הופך לרלוונטי כשרוצים שהסוכן יגיע למערכת פניות, למאגר נתונים או לשירות פנימי. בסדנה נציג אותו ונחבר חיבור אחד אם יש לכם מועמד ברור.</div></details><details><summary>אנחנו צוות של שניים. שווה?</summary><div class="ans">כן, ואולי דווקא יותר — בצוות קטן אין מי שיכתוב סטנדרטים, ו-CLAUDE.md ממלא בדיוק את התפקיד הזה. בקבוצות קטנות מאוד אפשר גם לקצר לחצי יום; נדבר על זה במיפוי.</div></details></div>
+  </div>
+</section>
+
+<section class="band band--alt">
+  <div class="wrap">
+    <p class="eyebrow">מסלולים סמוכים</p>
+    <h2>מה בא אחרי, או במקום</h2>
+    <p style="color:var(--concrete-2);margin-block-start:1.1rem;max-width:62ch">אפשר להזמין את הסדנה הזאת לבד, ואפשר לשלב אותה במסלול. בשני המקרים היא רצה על הכלים והתהליכים של הארגון שלכם.</p>
+    <div class="next"><a href="/ai-agents-workshop"><h3>סוכני AI ואוטומציה</h3><p>כשהסוכן צריך לרוץ בלי אדם.</p><span class="arrow">3 שעות ←</span></a><a href="/prompt-engineering-workshop"><h3>כתיבת פרומפטים</h3><p>השיטה שמאחורי כל כלי.</p><span class="arrow">3 שעות ←</span></a><a href="/workshops"><h3>כל הסדנאות</h3><p>לראות את המפה המלאה.</p><span class="arrow">לרשימה ←</span></a></div>
+  </div>
+</section>
+
+<section class="ctaband" id="contact">
+  <div class="wrap">
+    <p class="eyebrow">צעד ראשון</p>
+    <h2>על איזה מאגר תרצו לעבוד ביום הזה?</h2>
+    <p>שיחה קצרה על הפרויקט, על סביבת הפיתוח ועל מדיניות המידע, ותיאום ההתקנה מול ה-IT לפני המפגש.</p>
+    <div class="ctas">
+      <a class="btn btn-solid" href="https://wa.me/972544456795?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%A1%D7%93%D7%A0%D7%AA%20Claude%20Code" target="_blank" rel="noopener">לדבר בוואטסאפ</a>
+      <a class="btn btn-ghost" href="/tools">לראות את ארגז הכלים</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a class="brand" href="/" style="margin-block-end:.8rem">
+          <svg class="brand-mark" viewBox="0 0 24 24" fill="none" stroke="#E2563C" stroke-width="1.6" aria-hidden="true">
+            <rect x="4" y="8" width="16" height="12" rx="2"/><path d="M12 8V4"/><circle cx="12" cy="3" r="1.4"/>
+            <path d="M9 13h.01M15 13h.01M9.5 16.5h5"/>
+          </svg>
+          AI Workshops Israel
+        </a>
+        <p style="color:var(--concrete-2);font-size:.9rem;max-width:30ch">הטמעת AI בארגונים: אבחון, בניית סוכנים, חיבור למערכות וממשל. חברה בת של AI Lectures.</p>
+      </div>
+      <div>
+        <h2>שירותים</h2>
+        <ul>
+          <li><a href="/workshops">כל הסדנאות</a></li>
+          <li><a href="/tools">ארגז הכלים</a></li>
+          <li><a href="/ai-agents-workshop">סוכני AI ואוטומציה</a></li>
+          <li><a href="/#services">הטמעה ארגונית</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>סדנאות כלים</h2>
+        <ul>
+          <li><a href="/chatgpt-workshop">ChatGPT לארגונים</a></li>
+          <li><a href="/copilot-workshop">Microsoft Copilot 365</a></li>
+          <li><a href="/gemini-notebook-workshop">Gemini ו-Gemini Notebook</a></li>
+          <li><a href="/prompt-engineering-workshop">כתיבת פרומפטים</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>לפי מחלקה</h2>
+        <ul>
+          <li><a href="/sales-ai-workshop">מכירות</a></li>
+          <li><a href="/customer-service-ai-workshop">שירות ומוקדים</a></li>
+          <li><a href="/hr-ai-workshop">משאבי אנוש</a></li>
+          <li><a href="/workshops">כל הסדנאות ←</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fnote">
+      <span>AI Workshops Israel · חברה בת של AI Lectures</span>
+      <span>054-445-6795 · כל הזכויות שמורות</span>
+    </div>
+  </div>
+</footer>
+<script src="/site.js" defer></script>
+<script src="/page.js" defer></script>
+</body>
+</html>
