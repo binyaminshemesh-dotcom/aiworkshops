@@ -23,4 +23,9 @@
   <url><loc>https://aiworkshops.co.il/admin-ai-workshop</loc><priority>0.7</priority></url>
   <url><loc>https://aiworkshops.co.il/operations-ai-workshop</loc><priority>0.7</priority></url>
   <url><loc>https://aiworkshops.co.il/business-teams-ai-workshop</loc><priority>0.7</priority></url>
+  <url><loc>https://aiworkshops.co.il/ai-agents-workshop</loc><priority>0.7</priority></url>
+  <url><loc>https://aiworkshops.co.il/rag-knowledge-workshop</loc><priority>0.7</priority></url>
+  <url><loc>https://aiworkshops.co.il/ai-governance-workshop</loc><priority>0.7</priority></url>
+  <url><loc>https://aiworkshops.co.il/cio-ciso-ai-workshop</loc><priority>0.7</priority></url>
+  <url><loc>https://aiworkshops.co.il/responsible-ai-workshop</loc><priority>0.7</priority></url>
 </urlset>

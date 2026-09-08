@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>סדנת AI למנהלי מערכות מידע ואבטחה | AI Workshops Israel</title>
+<meta name="description" content="סדנה בת שלוש שעות ל-CIO ול-CISO: ארכיטקטורה, הרשאות, סיכוני OWASP למערכות LLM, בדיקת ספקים ומה לאשר — ומה לעצור.">
+<link rel="canonical" href="https://aiworkshops.co.il/cio-ciso-ai-workshop">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#0B1730">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="he_IL">
+<meta property="og:site_name" content="AI Workshops Israel">
+<meta property="og:url" content="https://aiworkshops.co.il/cio-ciso-ai-workshop">
+<meta property="og:title" content="סדנת AI למנהלי מערכות מידע ואבטחה | AI Workshops Israel">
+<meta property="og:description" content="סדנה בת שלוש שעות ל-CIO ול-CISO: ארכיטקטורה, הרשאות, סיכוני OWASP למערכות LLM, בדיקת ספקים ומה לאשר — ומה לעצור.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400..900&family=Space+Grotesk:wght@500;700&display=swap">
+<link rel="stylesheet" href="/site.css">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://aiworkshops.co.il/#org", "name": "AI Workshops Israel", "url": "https://aiworkshops.co.il/", "telephone": "+972-54-445-6795", "areaServed": {"@type": "Country", "name": "IL"}}, {"@type": "Course", "name": "סדנת AI למנהלי מערכות מידע ואבטחה", "description": "סדנה בת שלוש שעות ל-CIO ול-CISO: ארכיטקטורה, הרשאות, סיכוני OWASP למערכות LLM, בדיקת ספקים ומה לאשר — ומה לעצור.", "url": "https://aiworkshops.co.il/cio-ciso-ai-workshop", "provider": {"@id": "https://aiworkshops.co.il/#org"}, "inLanguage": "he", "teaches": "הערכת ארכיטקטורות AI ארגוניות, סיכוני אבטחה במערכות LLM וסוכנים, בדיקת ספקים, והגדרת קריטריונים לאישור מערכות.", "hasCourseInstance": {"@type": "CourseInstance", "courseMode": ["onsite", "online"], "courseWorkload": "PT3H", "location": {"@type": "Place", "name": "במשרדי הארגון או אונליין", "address": {"@type": "PostalAddress", "addressCountry": "IL"}}}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "מה באמת חדש כאן מבחינת אבטחה?", "acceptedAnswer": {"@type": "Answer", "text": "שלושה דברים: הזרקת פרומפט, שבה גבול הנתונים והפקודות מטושטש; סמכות עודפת של סוכנים שמבצעים פעולות; וזליגה דרך מערכות אחזור ידע. השאר — הרשאות, ספקים, זליגת מידע — הוא אבטחת מידע שאתם כבר יודעים לנהל, ולא נבזבז עליו זמן."}}, {"@type": "Question", "name": "אפשר להתגונן מהזרקת פרומפט?", "acceptedAnswer": {"@type": "Answer", "text": "לא לחלוטין, וכל מי שמבטיח אחרת מוכר לכם משהו. מה שכן עושים: מצמצמים סמכות, מפרידים בין תוכן לא מהימן לבין הוראות, דורשים אישור אנושי לפעולות משמעותיות, ומנטרים. בסדנה נדגים את זה בפועל ונבנה את שכבות ההגנה יחד."}}, {"@type": "Question", "name": "מה לדרוש מספק AI?", "acceptedAnswer": {"@type": "Answer", "text": "לפחות: האם הנתונים משמשים לאימון, איפה הם נשמרים ולכמה זמן, אילו אישורי ציות יש, מי מהעובדים שלהם יכול לגשת, ומה קורה למידע בסיום ההתקשרות. השאלון המלא נבנה בשעה השלישית ותצאו איתו."}}, {"@type": "Question", "name": "צריך להכיר ISO 42001?", "acceptedAnswer": {"@type": "Answer", "text": "לא כתנאי. אנחנו נציג את המסגרת — תקן שפורסם בדצמבר 2023, בנוי במחזור תכנון־ביצוע־בקרה־שיפור עם 38 בקרות בנספח A — כרקע מקצועי. אם הארגון שוקל הסמכה, זו נקודת פתיחה טובה."}}, {"@type": "Question", "name": "אנחנו כבר מחזיקים ISO 27001.", "acceptedAnswer": {"@type": "Answer", "text": "אז חלק ניכר מהתשתית קיים אצלכם, ובדרך כלל התוספת ממוקדת: הערכת השפעה של מערכת AI, ניהול מחזור חיים של מודלים, ושקיפות מול משתמשים. גם מסלול הסמכה ל-42001 קצר יותר לארגונים כמוכם."}}, {"@type": "Question", "name": "מה עם כלים שעובדים כבר משתמשים בהם בלי אישור?", "acceptedAnswer": {"@type": "Answer", "text": "זה כמעט תמיד המצב, וזו בעצם נקודת הפתיחה של הסדנה. מיפוי כן של מה שקורה בשטח שווה יותר מכל מדיניות שנכתבה בלעדיו — כולל ההחלטה מה מסדירים ומה חוסמים."}}, {"@type": "Question", "name": "מה ההבדל מסדנת משילות?", "acceptedAnswer": {"@type": "Answer", "text": "סדנת המשילות היא הנהלתית: מדיניות, ועדת היגוי ומדדים. זו טכנית: ארכיטקטורה, סיכונים, ספקים וקריטריוני אישור. ארגונים רבים מעבירים את שתיהן ברצף, ואז ההנהלה וה-IT מדברים באותה שפה."}}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "בית", "item": "https://aiworkshops.co.il/"}, {"@type": "ListItem", "position": 2, "name": "סדנאות", "item": "https://aiworkshops.co.il/workshops"}, {"@type": "ListItem", "position": 3, "name": "סדנת AI למנהלי מערכות מידע ואבטחה", "item": "https://aiworkshops.co.il/cio-ciso-ai-workshop"}]}]}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">דילוג לתוכן</a>
+<header class="bar" id="bar">
+  <a class="brand" href="/">
+    <svg class="brand-mark" viewBox="0 0 24 24" fill="none" stroke="#E2563C" stroke-width="1.6" aria-hidden="true">
+      <rect x="4" y="8" width="16" height="12" rx="2"/><path d="M12 8V4"/><circle cx="12" cy="3" r="1.4"/>
+      <path d="M9 13h.01M15 13h.01M9.5 16.5h5"/>
+    </svg>
+    AI Workshops Israel
+  </a>
+  <button class="burger" id="burger" aria-label="תפריט" aria-expanded="false" aria-controls="menu">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <nav id="menu">
+    <a href="/workshops">סדנאות</a>
+    <a href="/ai-leaders-course">קורס מובילי AI</a>
+    <a href="/tools">הכלים</a>
+    <a href="/#reviews">ביקורות</a>
+    <a href="https://wa.me/972544456795?text=%D7%94%D7%99%D7%99%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%20AI%20Workshops%20Israel" target="_blank" rel="noopener">וואטסאפ</a>
+  </nav>
+</header>
+<a class="wafab" href="https://wa.me/972544456795?text=%D7%94%D7%99%D7%99%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%20AI%20Workshops%20Israel%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%93%D7%91%D7%A8%20%D7%A2%D7%9C%20%D7%94%D7%98%D7%9E%D7%A2%D7%AA%20AI%20%D7%91%D7%90%D7%A8%D7%92%D7%95%D7%9F" target="_blank" rel="noopener" aria-label="לדבר איתנו בוואטסאפ">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.8 1.2 3c.2.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3Z"/><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>
+  <span class="wafab__tip">לדבר בוואטסאפ</span>
+</a>
+
+<nav class="crumbs" aria-label="פירורי לחם" id="top">
+  <ol>
+    <li><a href="/">בית</a></li>
+    <li aria-hidden="true">←</li>
+    <li><a href="/workshops">סדנאות</a></li>
+    <li aria-hidden="true">←</li>
+    <li>סדנת AI למנהלי מערכות מידע ואבטחה</li>
+  </ol>
+</nav>
+
+<main id="main">
+
+<section class="phero">
+  <div class="wrap">
+    <p class="eyebrow">סדנה טכנית · שלוש שעות</p>
+    <h1>סדנת AI למנהלי מערכות מידע ואבטחה</h1>
+    <p class="lede">סדנה בת שלוש שעות למי שחותם על האישור. עוסקים בשאלות שנוחתות על שולחן ה-CIO וה-CISO: איזו ארכיטקטורה נכונה לארגון, מה לבדוק אצל ספק לפני חתימה, אילו סיכונים באמת חדשים כאן ואילו הם אבטחת מידע רגילה בשם חדש — ומה הקריטריונים שלפיהם מאשרים או עוצרים.</p>
+    <div class="outcome"><b>מה יוצא מזה</b>תצאו עם רשימת בדיקה לאישור מערכת AI, שאלון לבדיקת ספקים, ומיפוי של הסיכונים הרלוונטיים לארכיטקטורה שלכם.</div>
+    <div class="chips"><span class="chip"><b>3</b> שעות</span><span class="chip">ל-CIO ול-CISO</span><span class="chip">OWASP LLM Top 10</span><span class="chip">שאלון ספקים</span></div>
+    <div class="ctas">
+      <a class="btn btn-solid" href="https://wa.me/972544456795?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%A1%D7%93%D7%A0%D7%AA%20AI%20%D7%9C%D7%9E%D7%A0%D7%94%D7%9C%D7%99%20%D7%9E%D7%A2%D7%A8%D7%9B%D7%95%D7%AA%20%D7%9E%D7%99%D7%93%D7%A2%20%D7%95%D7%90%D7%91%D7%98%D7%97%D7%94" target="_blank" rel="noopener">לתאם את הסדנה</a>
+      <a class="btn btn-ghost" href="#syllabus">מה עושים בשלוש השעות</a>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">רקע</p>
+    <h2>רוב הסיכונים מוכרים. שלושה באמת חדשים.</h2>
+    <p style="color:var(--concrete-2);margin-block-start:1.1rem;max-width:64ch">חלק גדול ממה שמוצג כ"סיכוני AI" הוא אבטחת מידע קלאסית בשם חדש: הרשאות, זליגת מידע, ניהול ספקים, תלות בצד שלישי. את אלה אתם כבר יודעים לנהל, והסדנה לא תבזבז עליהם את זמנכם.</p>
+    <p style="color:var(--concrete-2);margin-block-start:1.1rem;max-width:64ch">מה שכן חדש מרוכז בשלושה מקומות, וכולם מופיעים ב<b style="color:var(--concrete)">OWASP Top 10 for LLM Applications</b> בגרסת 2025. הראשון הוא <b style="color:var(--concrete)">Prompt Injection</b> — טקסט שהמערכת קוראת ומכיל הוראות שמשנות את התנהגותה; אין לזה מקבילה מדויקת בעולם שאתם מכירים, כי גבול הנתונים והפקודות מטושטש מהיסוד. השני הוא <b style="color:var(--concrete)">Excessive Agency</b> — סוכן שקיבל יותר סמכות ממה שהוא צריך, וכשהוא טועה הוא מבצע. השלישי הוא <b style="color:var(--concrete)">Vector and Embedding Weaknesses</b> — מערכת אחזור ידע שדולפת דרך ההרשאות, ולא דרך מנגנון האימות.</p>
+    <p style="color:var(--concrete-2);margin-block-start:1.1rem;max-width:64ch">מסביב לזה עוסקים במה שנדרש מכם בפועל: מפת ארכיטקטורות אפשריות והשלכות כל אחת על מיקום הנתונים, שאלון לבדיקת ספק, וקריטריונים ברורים לאישור. ברקע נמצאים <b style="color:var(--concrete)">ISO/IEC 42001</b> ו<b style="color:var(--concrete)">תיקון 13 לחוק הגנת הפרטיות</b> שבתוקף מאוגוסט 2025.</p>
+  </div>
+</section>
+
+<section class="band band--alt" id="syllabus">
+  <div class="wrap">
+    <p class="eyebrow">מבנה הסדנה</p>
+    <h2>מה עושים בפועל</h2>
+    <p style="color:var(--concrete-2);margin-block-start:1.1rem;max-width:62ch">שלוש שעות מחולקות לשלושה חלקים. בכל חלק יש הסבר קצר ואחריו תרגול על חומר אמיתי שלכם — לא הרצאה של שלוש שעות עם תרגיל בסוף.</p>
+    <div class="syl">
+      <div class="syl__item">
+        <div>
+          <h3><span>שעה ראשונה</span>ארכיטקטורה והחלטת מיקום</h3>
+          <ul><li>שלוש ארכיטקטורות: ענן ציבורי, ענן פרטי, והתקנה על שרת שלכם</li><li>איפה הנתונים יושבים בכל אחת — ומה נשמר, כמה זמן ואצל מי</li><li>זהות והרשאות: איך AI נכנס למודל ההרשאות הקיים ולא מקביל לו</li></ul>
+        </div>
+      </div>
+      <div class="syl__item">
+        <div>
+          <h3><span>שעה שנייה</span>הסיכונים שבאמת חדשים</h3>
+          <ul><li>הזרקת פרומפט: הדגמה חיה, ולמה סינון קלט אינו פתרון מלא</li><li>סמכות עודפת: איך מגדירים תקרה לפעולות של סוכן</li><li>אחזור ידע והרשאות: הכשל השקט שמתגלה מאוחר</li></ul>
+        </div>
+      </div>
+      <div class="syl__item">
+        <div>
+          <h3><span>שעה שלישית</span>אישור, ספקים וניטור</h3>
+          <ul><li>שאלון ספק: מה לשאול לפני חתימה, ומה חייב להופיע בחוזה</li><li>קריטריונים לאישור מערכת — ומתי התשובה היא לא</li><li>ניטור: מה לוגים צריכים לכלול כדי שאפשר יהיה לחקור אירוע</li></ul>
+        </div>
+      </div></div>
+    <p class="syl__opt"><b>לפני המפגש:</b> מבררים אילו כלים כבר בשימוש בארגון — כולל אלה שלא אושרו — מה מודל ההרשאות הקיים, ואילו דרישות רגולציה חלות עליכם.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">דוגמאות</p>
+    <h2>שלושה תוצרים מהסדנה</h2>
+    <p style="color:var(--concrete-2);margin-block-start:1.1rem;max-width:62ch">אלה דוגמאות מסדנאות קודמות. אצלכם הן ייראו אחרת, כי הן נבנות על התהליכים שעולים במיפוי שלפני המפגש.</p>
+    <div class="grid"><div class="cell"><span class="tag">אישור</span><h3>רשימת בדיקה לפני אישור</h3><p>מה חייב להתקיים כדי שמערכת AI תאושר: מיקום נתונים, הרשאות, לוגים, מסלול חזרה. הופך החלטה אישית לתהליך.</p><span class="len">שעה שלישית</span></div><div class="cell"><span class="tag">ספקים</span><h3>שאלון בדיקת ספק</h3><p>מה שואלים לפני חתימה: אימון על הנתונים, מיקום אחסון, תקופת שמירה, אישורי ציות, ומה קורה בסיום ההתקשרות.</p><span class="len">שעה שלישית</span></div><div class="cell"><span class="tag">סיכונים</span><h3>מפת סיכונים לארכיטקטורה שלכם</h3><p>לא רשימה גנרית — הסיכונים שרלוונטיים למה שאתם בפועל מפעילים, מדורגים לפי חשיפה.</p><span class="len">שעה שנייה</span></div></div>
+  </div>
+</section>
+
+<section class="band band--alt">
+  <div class="wrap">
+    <p class="eyebrow">הפרטים</p>
+    <h2>מה שכדאי לדעת מראש</h2>
+    <p style="color:var(--concrete-2);margin-block-start:1.1rem;max-width:62ch">כל מה שנשאלים לפני שסוגרים תאריך, במקום אחד. אם משהו כאן לא מתאים לכם — אפשר להתאים, ונאמר את זה בשיחה.</p>
+    <dl class="facts"><div><dt>פורמט</dt><dd><b>3 שעות</b>ניתן להרחבה ליום מלא</dd></div><div><dt>קהל</dt><dd><b>CIO, CISO וצוותיהם</b>גם ארכיטקטים</dd></div><div><dt>דרישות קדם</dt><dd><b>רקע ב-IT</b>לא נדרש רקע ב-AI</dd></div><div><dt>מסגרות</dt><dd><b>OWASP ו-ISO 42001</b>כרקע מקצועי</dd></div><div><dt>תוצר</dt><dd><b>רשימת בדיקה ושאלון</b>לשימוש מיידי</dd></div><div><dt>הדגמות</dt><dd><b>חיות</b>כולל הזרקת פרומפט</dd></div></dl>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">ארכיטקטורה</p>
+    <h2>שלוש דרכים, שלוש תוצאות</h2>
+    <div class="tbl-scroll">
+      <table>
+        <caption>ההחלטה נגזרת מסיווג המידע ומהרגולציה שחלה עליכם, לא מהעדפה טכנולוגית. אנחנו לא משווקים של אף ספק.</caption>
+        <thead><tr><th scope="col">ארכיטקטורה</th><th scope="col">איפה המידע</th><th scope="col">יתרון</th><th scope="col">מחיר</th></tr></thead>
+        <tbody><tr><th scope="row">שירות ענן ציבורי (תוכנית ארגונית)</th><td>אצל הספק, לפי תנאי התוכנית הארגונית</td><td>הכי מהיר, הכי פחות תחזוקה</td><td>תלות בספק ובמדיניות שלו; בחירת אזור אחסון לא תמיד זמינה</td></tr><tr><th scope="row">ענן פרטי או אזור ייעודי</th><td>אצל הספק, באזור שהגדרתם</td><td>איזון בין מהירות לשליטה</td><td>עלות גבוהה יותר, לא כל היכולות זמינות</td></tr><tr><th scope="row">התקנה על תשתית שלכם</th><td>אצלכם בלבד</td><td>שליטה מלאה; מתאים למידע שאסור לו לצאת</td><td>דורש תחזוקה, ומודלים לרוב פחות חזקים</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="band band--alt">
+  <div class="wrap">
+    <p class="eyebrow">למי זה מתאים</p>
+    <h2>למי הסדנה הזאת</h2>
+    <p style="color:var(--concrete-2);margin-block-start:1.1rem;max-width:62ch">הסדנה עובדת הכי טוב כשבחדר יושבים אנשים שחולקים את אותם תהליכים. אלה הקבוצות שרואות ממנה הכי הרבה:</p>
+    <div class="aud">
+      <ul><li>מנהלי מערכות מידע שנדרשים לאשר כלי AI</li><li>מנהלי אבטחת מידע שצריכים לבנות עמדה מקצועית</li><li>ארכיטקטים שמתכננים חיבור AI למערכות ליבה</li><li>ארגונים בענפים מפוקחים לפני פרויקט ראשון</li></ul>
+      <div class="note">
+        <h3>למה זו לא הרצאת סיכונים</h3>
+        <p>קל להציג רשימת אימים ולצאת. זה משאיר את ה-CIO בדיוק במקום שבו הוא היה: יודע שיש סיכון, לא יודע מה לאשר.</p>
+        <p>לכן שליש מהסדנה מוקדש לקריטריונים — מה חייב להתקיים כדי לומר כן, ומתי לומר לא. עמדה מקצועית שאפשר להגן עליה מול הנהלה.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="faq">
+  <div class="wrap">
+    <p class="eyebrow">שאלות שחוזרות</p>
+    <h2>על סדנת CIO ו-CISO</h2>
+    <div class="qa"><details open><summary>מה באמת חדש כאן מבחינת אבטחה?</summary><div class="ans">שלושה דברים: הזרקת פרומפט, שבה גבול הנתונים והפקודות מטושטש; סמכות עודפת של סוכנים שמבצעים פעולות; וזליגה דרך מערכות אחזור ידע. השאר — הרשאות, ספקים, זליגת מידע — הוא אבטחת מידע שאתם כבר יודעים לנהל, ולא נבזבז עליו זמן.</div></details><details><summary>אפשר להתגונן מהזרקת פרומפט?</summary><div class="ans">לא לחלוטין, וכל מי שמבטיח אחרת מוכר לכם משהו. מה שכן עושים: מצמצמים סמכות, מפרידים בין תוכן לא מהימן לבין הוראות, דורשים אישור אנושי לפעולות משמעותיות, ומנטרים. בסדנה נדגים את זה בפועל ונבנה את שכבות ההגנה יחד.</div></details><details><summary>מה לדרוש מספק AI?</summary><div class="ans">לפחות: האם הנתונים משמשים לאימון, איפה הם נשמרים ולכמה זמן, אילו אישורי ציות יש, מי מהעובדים שלהם יכול לגשת, ומה קורה למידע בסיום ההתקשרות. השאלון המלא נבנה בשעה השלישית ותצאו איתו.</div></details><details><summary>צריך להכיר ISO 42001?</summary><div class="ans">לא כתנאי. אנחנו נציג את המסגרת — תקן שפורסם בדצמבר 2023, בנוי במחזור תכנון־ביצוע־בקרה־שיפור עם 38 בקרות בנספח A — כרקע מקצועי. אם הארגון שוקל הסמכה, זו נקודת פתיחה טובה.</div></details><details><summary>אנחנו כבר מחזיקים ISO 27001.</summary><div class="ans">אז חלק ניכר מהתשתית קיים אצלכם, ובדרך כלל התוספת ממוקדת: הערכת השפעה של מערכת AI, ניהול מחזור חיים של מודלים, ושקיפות מול משתמשים. גם מסלול הסמכה ל-42001 קצר יותר לארגונים כמוכם.</div></details><details><summary>מה עם כלים שעובדים כבר משתמשים בהם בלי אישור?</summary><div class="ans">זה כמעט תמיד המצב, וזו בעצם נקודת הפתיחה של הסדנה. מיפוי כן של מה שקורה בשטח שווה יותר מכל מדיניות שנכתבה בלעדיו — כולל ההחלטה מה מסדירים ומה חוסמים.</div></details><details><summary>מה ההבדל מסדנת משילות?</summary><div class="ans">סדנת המשילות היא הנהלתית: מדיניות, ועדת היגוי ומדדים. זו טכנית: ארכיטקטורה, סיכונים, ספקים וקריטריוני אישור. ארגונים רבים מעבירים את שתיהן ברצף, ואז ההנהלה וה-IT מדברים באותה שפה.</div></details></div>
+  </div>
+</section>
+
+<section class="band band--alt">
+  <div class="wrap">
+    <p class="eyebrow">מסלולים סמוכים</p>
+    <h2>מה בא אחרי, או במקום</h2>
+    <p style="color:var(--concrete-2);margin-block-start:1.1rem;max-width:62ch">אפשר להזמין את הסדנה הזאת לבד, ואפשר לשלב אותה במסלול. בשני המקרים היא רצה על הכלים והתהליכים של הארגון שלכם.</p>
+    <div class="next"><a href="/ai-governance-workshop"><h3>משילות AI</h3><p>השכבה ההנהלתית של אותן החלטות.</p><span class="arrow">3 שעות ←</span></a><a href="/ai-agents-workshop"><h3>סוכני AI ואוטומציה</h3><p>מה שאתם נדרשים לאשר.</p><span class="arrow">3 שעות ←</span></a><a href="/responsible-ai-workshop"><h3>AI אחראי</h3><p>פרטיות והטיות לעומק.</p><span class="arrow">3 שעות ←</span></a></div>
+  </div>
+</section>
+
+<section class="ctaband" id="contact">
+  <div class="wrap">
+    <p class="eyebrow">צעד ראשון</p>
+    <h2>מה אתם עונים כשמבקשים מכם לאשר כלי AI?</h2>
+    <p>שיחה קצרה על הארכיטקטורה והרגולציה שלכם, והתאמת הסדנה לכלים שכבר בשימוש בארגון.</p>
+    <div class="ctas">
+      <a class="btn btn-solid" href="https://wa.me/972544456795?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%A1%D7%93%D7%A0%D7%AA%20AI%20%D7%9C%D7%9E%D7%A0%D7%94%D7%9C%D7%99%20%D7%9E%D7%A2%D7%A8%D7%9B%D7%95%D7%AA%20%D7%9E%D7%99%D7%93%D7%A2%20%D7%95%D7%90%D7%91%D7%98%D7%97%D7%94" target="_blank" rel="noopener">לדבר בוואטסאפ</a>
+      <a class="btn btn-ghost" href="/tools">לראות את ארגז הכלים</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a class="brand" href="/" style="margin-block-end:.8rem">
+          <svg class="brand-mark" viewBox="0 0 24 24" fill="none" stroke="#E2563C" stroke-width="1.6" aria-hidden="true">
+            <rect x="4" y="8" width="16" height="12" rx="2"/><path d="M12 8V4"/><circle cx="12" cy="3" r="1.4"/>
+            <path d="M9 13h.01M15 13h.01M9.5 16.5h5"/>
+          </svg>
+          AI Workshops Israel
+        </a>
+        <p style="color:var(--concrete-2);font-size:.9rem;max-width:30ch">הטמעת AI בארגונים: אבחון, בניית סוכנים, חיבור למערכות וממשל. חברה בת של AI Lectures.</p>
+      </div>
+      <div>
+        <h2>שירותים</h2>
+        <ul>
+          <li><a href="/workshops">כל הסדנאות</a></li>
+          <li><a href="/tools">ארגז הכלים</a></li>
+          <li><a href="/ai-leaders-course">קורס מובילי AI</a></li>
+          <li><a href="/#services">הטמעה ארגונית</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>סדנאות כלים</h2>
+        <ul>
+          <li><a href="/chatgpt-workshop">ChatGPT לארגונים</a></li>
+          <li><a href="/copilot-workshop">Microsoft Copilot 365</a></li>
+          <li><a href="/gemini-notebook-workshop">Gemini ו-Gemini Notebook</a></li>
+          <li><a href="/prompt-engineering-workshop">כתיבת פרומפטים</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>לפי מחלקה</h2>
+        <ul>
+          <li><a href="/sales-ai-workshop">מכירות</a></li>
+          <li><a href="/customer-service-ai-workshop">שירות ומוקדים</a></li>
+          <li><a href="/hr-ai-workshop">משאבי אנוש</a></li>
+          <li><a href="/workshops">כל הסדנאות ←</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fnote">
+      <span>AI Workshops Israel · חברה בת של AI Lectures</span>
+      <span>054-445-6795 · כל הזכויות שמורות</span>
+    </div>
+  </div>
+</footer>
+<script src="/site.js" defer></script>
+<script src="/page.js" defer></script>
+</body>
+</html>

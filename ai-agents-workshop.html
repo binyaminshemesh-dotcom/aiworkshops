@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>סדנת סוכני AI ואוטומציה | AI Workshops Israel</title>
+<meta name="description" content="סדנה בת שלוש שעות בבניית סוכני AI ארגוניים: ארכיטקטורה, כלים והרשאות, טיפול בשגיאות ובקרה — כולל הסיכונים שאסור לבנות בלעדיהם.">
+<link rel="canonical" href="https://aiworkshops.co.il/ai-agents-workshop">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#0B1730">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="he_IL">
+<meta property="og:site_name" content="AI Workshops Israel">
+<meta property="og:url" content="https://aiworkshops.co.il/ai-agents-workshop">
+<meta property="og:title" content="סדנת סוכני AI ואוטומציה | AI Workshops Israel">
+<meta property="og:description" content="סדנה בת שלוש שעות בבניית סוכני AI ארגוניים: ארכיטקטורה, כלים והרשאות, טיפול בשגיאות ובקרה — כולל הסיכונים שאסור לבנות בלעדיהם.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400..900&family=Space+Grotesk:wght@500;700&display=swap">
+<link rel="stylesheet" href="/site.css">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://aiworkshops.co.il/#org", "name": "AI Workshops Israel", "url": "https://aiworkshops.co.il/", "telephone": "+972-54-445-6795", "areaServed": {"@type": "Country", "name": "IL"}}, {"@type": "Course", "name": "סדנת סוכני AI ואוטומציה", "description": "סדנה בת שלוש שעות בבניית סוכני AI ארגוניים: ארכיטקטורה, כלים והרשאות, טיפול בשגיאות ובקרה — כולל הסיכונים שאסור לבנות בלעדיהם.", "url": "https://aiworkshops.co.il/ai-agents-workshop", "provider": {"@id": "https://aiworkshops.co.il/#org"}, "inLanguage": "he", "teaches": "בניית סוכן AI ארגוני: ארכיטקטורה, חיבור לכלים ולמערכות, הרשאות, טיפול בשגיאות, לוגים ובקרה על פעולות אוטונומיות.", "hasCourseInstance": {"@type": "CourseInstance", "courseMode": ["onsite", "online"], "courseWorkload": "PT3H", "location": {"@type": "Place", "name": "במשרדי הארגון או אונליין", "address": {"@type": "PostalAddress", "addressCountry": "IL"}}}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "צריך לדעת לתכנת?", "acceptedAnswer": {"@type": "Answer", "text": "לא. כל מה שנבנה בסדנה נעשה בממשק ויזואלי. אם יש לכם צוות פיתוח, נציין איפה עבודה בקוד עדיפה — אבל זה לא תנאי כניסה."}}, {"@type": "Question", "name": "מה ההבדל מסדנת פרודוקטיביות ואוטומציה?", "acceptedAnswer": {"@type": "Answer", "text": "שם בונים אוטומציה שמקצרת משימה, בדרך כלל עם אדם שמאשר. כאן בונים סוכן שמחליט ומבצע, ולכן שליש מהסדנה מוקדש להרשאות, לשגיאות ולבקרה. מי שעשה את הראשונה מגיע מוכן יותר."}}, {"@type": "Question", "name": "מה זה הזרקת פרומפט ולמה זה מסוכן בסוכן?", "acceptedAnswer": {"@type": "Answer", "text": "זה מצב שבו טקסט שהסוכן קורא — מייל, מסמך, עמוד אינטרנט — מכיל הוראות שמשנות את התנהגותו. בצ׳אט התוצאה היא תשובה מוזרה; בסוכן עם הרשאות התוצאה יכולה להיות פעולה שלא התכוונתם אליה. OWASP מדרג את זה כסיכון הראשון ברשימת 2025 שלו, ואנחנו מתרגלים את זה בפועל."}}, {"@type": "Question", "name": "באיזה כלי נבנה?", "acceptedAnswer": {"@type": "Answer", "text": "נקבע במיפוי: n8n אם המידע רגיש או שרוצים התקנה על שרת שלכם, Power Automate בסביבת מיקרוסופט, או סביבת בניית הסוכנים של הספק שכבר יש לכם. אין לנו הסכם עם אף אחד מהם."}}, {"@type": "Question", "name": "כמה מערכות אפשר לחבר?", "acceptedAnswer": {"@type": "Answer", "text": "בסדנה — אחת, לפעמים שתיים. זה נשמע מעט, וזה מכוון: סוכן שמחובר לחמש מערכות ביום הראשון הוא סוכן שאף אחד לא יודע לתחזק. הרחבה היא פרויקט."}}, {"@type": "Question", "name": "מה ה-IT צריך לאשר?", "acceptedAnswer": {"@type": "Answer", "text": "לפחות גישה למערכת אחת, ברמת הרשאות מוגדרת. אנחנו שולחים רשימת דרישות מסודרת לפני המפגש, ומעדיפים שנציג IT יהיה בחדר — לרוב זה חוסך שבועיים אחר כך."}}, {"@type": "Question", "name": "זה מספיק כדי להריץ בייצור?", "acceptedAnswer": {"@type": "Answer", "text": "לא, ואנחנו אומרים את זה מראש. הסדנה נותנת סוכן עובד ורשימת בדיקות. מעבר לייצור כולל הרשאות מלאות, ניטור, טיפול בכשלים ותיעוד — וזה פרויקט הטמעה של שישה עד שנים־עשר שבועות."}}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "בית", "item": "https://aiworkshops.co.il/"}, {"@type": "ListItem", "position": 2, "name": "סדנאות", "item": "https://aiworkshops.co.il/workshops"}, {"@type": "ListItem", "position": 3, "name": "סדנת סוכני AI ואוטומציה", "item": "https://aiworkshops.co.il/ai-agents-workshop"}]}]}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">דילוג לתוכן</a>
+<header class="bar" id="bar">
+  <a class="brand" href="/">
+    <svg class="brand-mark" viewBox="0 0 24 24" fill="none" stroke="#E2563C" stroke-width="1.6" aria-hidden="true">
+      <rect x="4" y="8" width="16" height="12" rx="2"/><path d="M12 8V4"/><circle cx="12" cy="3" r="1.4"/>
+      <path d="M9 13h.01M15 13h.01M9.5 16.5h5"/>
+    </svg>
+    AI Workshops Israel
+  </a>
+  <button class="burger" id="burger" aria-label="תפריט" aria-expanded="false" aria-controls="menu">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <nav id="menu">
+    <a href="/workshops">סדנאות</a>
+    <a href="/ai-leaders-course">קורס מובילי AI</a>
+    <a href="/tools">הכלים</a>
+    <a href="/#reviews">ביקורות</a>
+    <a href="https://wa.me/972544456795?text=%D7%94%D7%99%D7%99%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%20AI%20Workshops%20Israel" target="_blank" rel="noopener">וואטסאפ</a>
+  </nav>
+</header>
+<a class="wafab" href="https://wa.me/972544456795?text=%D7%94%D7%99%D7%99%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%20AI%20Workshops%20Israel%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%93%D7%91%D7%A8%20%D7%A2%D7%9C%20%D7%94%D7%98%D7%9E%D7%A2%D7%AA%20AI%20%D7%91%D7%90%D7%A8%D7%92%D7%95%D7%9F" target="_blank" rel="noopener" aria-label="לדבר איתנו בוואטסאפ">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.8 1.2 3c.2.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3Z"/><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>
+  <span class="wafab__tip">לדבר בוואטסאפ</span>
+</a>
+
+<nav class="crumbs" aria-label="פירורי לחם" id="top">
+  <ol>
+    <li><a href="/">בית</a></li>
+    <li aria-hidden="true">←</li>
+    <li><a href="/workshops">סדנאות</a></li>
+    <li aria-hidden="true">←</li>
+    <li>סדנת סוכני AI ואוטומציה</li>
+  </ol>
+</nav>
+
+<main id="main">
+
+<section class="phero">
+  <div class="wrap">
+    <p class="eyebrow">סדנה טכנית · שלוש שעות</p>
+    <h1>סדנת סוכני AI ואוטומציה</h1>
+    <p class="lede">סדנה מעשית בת שלוש שעות בבניית סוכני AI — לא צ׳אט שמנסח, אלא מערכת שמקבלת החלטה ומבצעת פעולה במערכות אמיתיות. בונים סוכן אחד מקצה לקצה, ומקדישים שליש מהזמן לחלק שרוב הפרויקטים מדלגים עליו: מה קורה כשהוא טועה, מה מותר לו לגעת בו, ומי רואה מה הוא עשה.</p>
+    <div class="outcome"><b>מה יוצא מזה</b>הצוות יוצא עם סוכן אחד שרץ על תהליך אמיתי, עם מפת הרשאות מוגדרת, ועם רשימת בדיקות שמריצים לפני שסוכן נוגע במערכת ייצור.</div>
+    <div class="chips"><span class="chip"><b>3</b> שעות</span><span class="chip">סוכן שרץ בסוף</span><span class="chip">הרשאות ובקרה</span><span class="chip">בלי קוד</span></div>
+    <div class="ctas">
+      <a class="btn btn-solid" href="https://wa.me/972544456795?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%A1%D7%93%D7%A0%D7%AA%20%D7%A1%D7%95%D7%9B%D7%A0%D7%99%20AI%20%D7%95%D7%90%D7%95%D7%98%D7%95%D7%9E%D7%A6%D7%99%D7%94" target="_blank" rel="noopener">לתאם את הסדנה</a>
+      <a class="btn btn-ghost" href="#syllabus">מה עושים בשלוש השעות</a>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">רקע</p>
+    <h2>ההבדל בין צ׳אט שטועה לסוכן שטועה</h2>
+    <p style="color:var(--concrete-2);margin-block-start:1.1rem;max-width:64ch">כשצ׳אט טועה, אדם קורא את התשובה ומתקן. כשסוכן טועה, הוא כבר שלח את המייל, עדכן את השדה ב-CRM או אישר את החשבונית. זה כל ההבדל, וזו הסיבה שהסדנה הזאת בנויה אחרת מסדנת פרודוקטיביות: לא איך גורמים לזה לעבוד, אלא איך גורמים לזה להיכשל בבטחה.</p>
+    <p style="color:var(--concrete-2);margin-block-start:1.1rem;max-width:64ch">בונים סוכן אחד מקצה לקצה: מה מפעיל אותו, לאילו כלים ומערכות יש לו גישה, מה הוא רשאי לעשות בכל אחד מהם, מה קורה כשכלי לא מגיב, ואיפה נדרש אישור אנושי. במקביל מציגים את הסיכונים המוכרים — <b style="color:var(--concrete)">OWASP Top 10 for LLM Applications</b> בגרסת 2025 מגדיר בין היתר את <b style="color:var(--concrete)">Excessive Agency</b> (סמכות עודפת), את <b style="color:var(--concrete)">Improper Output Handling</b> (פלט שלא נבדק לפני שהוא מפעיל פעולה) ואת <b style="color:var(--concrete)">Prompt Injection</b> — הסיכון שבו טקסט שהסוכן קורא מכיל הוראות שמשנות את התנהגותו.</p>
+    <p style="color:var(--concrete-2);margin-block-start:1.1rem;max-width:64ch">הכלי שבו נבנה נקבע לפי הארגון: n8n כשרוצים אפשרות התקנה על שרת שלכם, Power Automate בסביבת מיקרוסופט, או סביבת בניית סוכנים של הספק שכבר יש לכם. אין לנו העדפה מסחרית, ואין הסכמי שותפות.</p>
+  </div>
+</section>
+
+<section class="band band--alt" id="syllabus">
+  <div class="wrap">
+    <p class="eyebrow">מבנה הסדנה</p>
+    <h2>מה עושים בפועל</h2>
+    <p style="color:var(--concrete-2);margin-block-start:1.1rem;max-width:62ch">שלוש שעות מחולקות לשלושה חלקים. בכל חלק יש הסבר קצר ואחריו תרגול על חומר אמיתי שלכם — לא הרצאה של שלוש שעות עם תרגיל בסוף.</p>
+    <div class="syl">
+      <div class="syl__item">
+        <div>
+          <h3><span>שעה ראשונה</span>ארכיטקטורה של סוכן</h3>
+          <ul><li>ארבעת המרכיבים: טריגר, הקשר, כלים, ותנאי עצירה</li><li>מה הופך תהליך למועמד טוב — תדירות, יציבות, וסיכון נמוך לטעות</li><li>הבחירה שקובעת הכול: מה הסוכן רשאי לעשות לבד ומה לא</li></ul>
+        </div>
+      </div>
+      <div class="syl__item">
+        <div>
+          <h3><span>שעה שנייה</span>בונים אותו</h3>
+          <ul><li>חיבור לכלי או למערכת אחת אמיתית, עם הרשאות מוגדרות</li><li>הרצה על שלושה מקרים אמיתיים, כולל אחד שאמור להיכשל</li><li>לוג שאפשר לחקור: מה הסוכן קיבל, מה החליט, ומה ביצע</li></ul>
+        </div>
+      </div>
+      <div class="syl__item">
+        <div>
+          <h3><span>שעה שלישית</span>כשזה נשבר</h3>
+          <ul><li>טיפול בשגיאות: ניסיון חוזר, עצירה, והתראה למי שצריך לדעת</li><li>סמכות עודפת והזרקת פרומפט — שני הסיכונים שהכי מפילים סוכנים</li><li>רשימת הבדיקות לפני שסוכן נוגע במערכת ייצור</li></ul>
+        </div>
+      </div></div>
+    <p class="syl__opt"><b>לפני המפגש:</b> בוחרים יחד תהליך אחד יציב ובעל תדירות גבוהה, מבררים לאילו מערכות נדרשת גישה, ומסכמים עם ה-IT מה ניתן לחבר. סוכן על תהליך שעדיין משתנה כל שבוע לא יחזיק.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">דוגמאות</p>
+    <h2>שלושה סוכנים שנבנו בסדנאות</h2>
+    <p style="color:var(--concrete-2);margin-block-start:1.1rem;max-width:62ch">אלה דוגמאות מסדנאות קודמות. אצלכם הן ייראו אחרת, כי הן נבנות על התהליכים שעולים במיפוי שלפני המפגש.</p>
+    <div class="grid"><div class="cell"><span class="tag">פניות</span><h3>סוכן שמסווג ומנתב</h3><p>פנייה נכנסת מסווגת, מתועדפת ונרשמת במערכת — עם עצירה מפורשת לפני כל תשובה שיוצאת ללקוח.</p><span class="len">המבנה הנפוץ ביותר</span></div><div class="cell"><span class="tag">מסמכים</span><h3>סוכן שמחלץ ומתייק</h3><p>מסמך שמגיע במייל, חילוץ שדות קבועים, שמירה בתיקייה הנכונה ורישום בגיליון מעקב. פשוט, ולכן עובד.</p><span class="len">טוב לסוכן ראשון</span></div><div class="cell"><span class="tag">בקרה</span><h3>סוכן שמסמן חריגים</h3><p>סריקה יומית של נתונים והתראה כשמשהו חורג מהסף שהגדרתם. לא מתקן — רק מסמן, וזו הנקודה.</p><span class="len">הכי בטוח להתחיל בו</span></div></div>
+  </div>
+</section>
+
+<section class="band band--alt">
+  <div class="wrap">
+    <p class="eyebrow">הפרטים</p>
+    <h2>מה שכדאי לדעת מראש</h2>
+    <p style="color:var(--concrete-2);margin-block-start:1.1rem;max-width:62ch">כל מה שנשאלים לפני שסוגרים תאריך, במקום אחד. אם משהו כאן לא מתאים לכם — אפשר להתאים, ונאמר את זה בשיחה.</p>
+    <dl class="facts"><div><dt>פורמט</dt><dd><b>3 שעות</b>ניתן להרחבה ליום מלא</dd></div><div><dt>קהל</dt><dd><b>צוותים טכניים ומובילי AI</b>לא נדרש רקע בתכנות</dd></div><div><dt>כלי</dt><dd><b>לפי הסביבה שלכם</b>n8n, Power Automate או סביבת הספק</dd></div><div><dt>IT</dt><dd><b>תיאום חובה</b>לפחות חיבור אחד דורש אישור</dd></div><div><dt>תוצר</dt><dd><b>סוכן שרץ</b>ומפת הרשאות כתובה</dd></div><div><dt>בעלות</dt><dd><b>נדרש בעלים בשם</b>סוכן בלי בעלים מפסיק לעבוד</dd></div></dl>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">הבדלה</p>
+    <h2>במה זה שונה מסדנת פרודוקטיביות ואוטומציה</h2>
+    <div class="tbl-scroll">
+      <table>
+        <caption>שתי הסדנאות משלימות. מי שעשה את הראשונה מגיע לזו מוכן יותר, אבל זה לא תנאי.</caption>
+        <thead><tr><th scope="col"></th><th scope="col">פרודוקטיביות ואוטומציה</th><th scope="col">סוכני AI (הסדנה הזאת)</th></tr></thead>
+        <tbody><tr><th scope="row">המיקוד</th><td>קיצור משימות ואוטומציה ראשונה</td><td>מערכת שמחליטה ומבצעת לבד</td></tr><tr><th scope="row">רמת הסיכון</th><td>נמוכה — אדם בלולאה כמעט תמיד</td><td>גבוהה יותר — הסוכן פועל במערכות</td></tr><tr><th scope="row">החלק הגדול</th><td>בניית התהליך</td><td>הרשאות, שגיאות ובקרה</td></tr><tr><th scope="row">מי בחדר</th><td>כל צוות</td><td>צוותים טכניים ומובילי AI</td></tr><tr><th scope="row">מה יוצא</th><td>אוטומציה אחת שרצה</td><td>סוכן, מפת הרשאות ורשימת בדיקות</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="band band--alt">
+  <div class="wrap">
+    <p class="eyebrow">למי זה מתאים</p>
+    <h2>למי הסדנה הזאת</h2>
+    <p style="color:var(--concrete-2);margin-block-start:1.1rem;max-width:62ch">הסדנה עובדת הכי טוב כשבחדר יושבים אנשים שחולקים את אותם תהליכים. אלה הקבוצות שרואות ממנה הכי הרבה:</p>
+    <div class="aud">
+      <ul><li>ארגונים שכבר הריצו אוטומציה אחת ורוצים להעמיק</li><li>צוותי IT ופיתוח שנדרשים לאשר סוכנים ולא יודעים מה לבדוק</li><li>מובילי AI פנימיים אחרי קורס מובילי AI</li><li>ארגונים ששוקלים פרויקט הטמעה ורוצים להבין מה זה כרוך</li></ul>
+      <div class="note">
+        <h3>הכלל שאנחנו פותחים בו</h3>
+        <p>סוכן ראשון לא נוגע בכסף, לא שולח ללקוח, ולא מוחק כלום. הוא קורא, מסמן ומתעד.</p>
+        <p>סמכות מרחיבים אחרי חודש של לוגים שמראים שהוא צודק — ולא לפני. זה גם מה ש-OWASP מכנה Excessive Agency, והוא הכשל הנפוץ ביותר בפרויקטים שנופלים.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="faq">
+  <div class="wrap">
+    <p class="eyebrow">שאלות שחוזרות</p>
+    <h2>על סדנת סוכני AI</h2>
+    <div class="qa"><details open><summary>צריך לדעת לתכנת?</summary><div class="ans">לא. כל מה שנבנה בסדנה נעשה בממשק ויזואלי. אם יש לכם צוות פיתוח, נציין איפה עבודה בקוד עדיפה — אבל זה לא תנאי כניסה.</div></details><details><summary>מה ההבדל מסדנת פרודוקטיביות ואוטומציה?</summary><div class="ans">שם בונים אוטומציה שמקצרת משימה, בדרך כלל עם אדם שמאשר. כאן בונים סוכן שמחליט ומבצע, ולכן שליש מהסדנה מוקדש להרשאות, לשגיאות ולבקרה. מי שעשה את הראשונה מגיע מוכן יותר.</div></details><details><summary>מה זה הזרקת פרומפט ולמה זה מסוכן בסוכן?</summary><div class="ans">זה מצב שבו טקסט שהסוכן קורא — מייל, מסמך, עמוד אינטרנט — מכיל הוראות שמשנות את התנהגותו. בצ׳אט התוצאה היא תשובה מוזרה; בסוכן עם הרשאות התוצאה יכולה להיות פעולה שלא התכוונתם אליה. OWASP מדרג את זה כסיכון הראשון ברשימת 2025 שלו, ואנחנו מתרגלים את זה בפועל.</div></details><details><summary>באיזה כלי נבנה?</summary><div class="ans">נקבע במיפוי: n8n אם המידע רגיש או שרוצים התקנה על שרת שלכם, Power Automate בסביבת מיקרוסופט, או סביבת בניית הסוכנים של הספק שכבר יש לכם. אין לנו הסכם עם אף אחד מהם.</div></details><details><summary>כמה מערכות אפשר לחבר?</summary><div class="ans">בסדנה — אחת, לפעמים שתיים. זה נשמע מעט, וזה מכוון: סוכן שמחובר לחמש מערכות ביום הראשון הוא סוכן שאף אחד לא יודע לתחזק. הרחבה היא פרויקט.</div></details><details><summary>מה ה-IT צריך לאשר?</summary><div class="ans">לפחות גישה למערכת אחת, ברמת הרשאות מוגדרת. אנחנו שולחים רשימת דרישות מסודרת לפני המפגש, ומעדיפים שנציג IT יהיה בחדר — לרוב זה חוסך שבועיים אחר כך.</div></details><details><summary>זה מספיק כדי להריץ בייצור?</summary><div class="ans">לא, ואנחנו אומרים את זה מראש. הסדנה נותנת סוכן עובד ורשימת בדיקות. מעבר לייצור כולל הרשאות מלאות, ניטור, טיפול בכשלים ותיעוד — וזה פרויקט הטמעה של שישה עד שנים־עשר שבועות.</div></details></div>
+  </div>
+</section>
+
+<section class="band band--alt">
+  <div class="wrap">
+    <p class="eyebrow">מסלולים סמוכים</p>
+    <h2>מה בא אחרי, או במקום</h2>
+    <p style="color:var(--concrete-2);margin-block-start:1.1rem;max-width:62ch">אפשר להזמין את הסדנה הזאת לבד, ואפשר לשלב אותה במסלול. בשני המקרים היא רצה על הכלים והתהליכים של הארגון שלכם.</p>
+    <div class="next"><a href="/ai-productivity-workshop"><h3>פרודוקטיביות ואוטומציה</h3><p>המדרגה שלפני, אם עוד לא עשיתם.</p><span class="arrow">3 שעות ←</span></a><a href="/rag-knowledge-workshop"><h3>עוזרי ידע ו-RAG</h3><p>לתת לסוכן גישה לידע הארגוני.</p><span class="arrow">3 שעות ←</span></a><a href="/#services"><h3>פרויקט הטמעה</h3><p>כשצריך סוכנים בייצור.</p><span class="arrow">6–12 שבועות ←</span></a></div>
+  </div>
+</section>
+
+<section class="ctaband" id="contact">
+  <div class="wrap">
+    <p class="eyebrow">צעד ראשון</p>
+    <h2>איזה תהליך אצלכם רץ אותו דבר כל יום?</h2>
+    <p>ספרו לנו מה חוזר ובאילו מערכות הוא נוגע, ונבדוק אם הוא בשל לסוכן או שקודם צריך לייצב אותו.</p>
+    <div class="ctas">
+      <a class="btn btn-solid" href="https://wa.me/972544456795?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%A1%D7%93%D7%A0%D7%AA%20%D7%A1%D7%95%D7%9B%D7%A0%D7%99%20AI%20%D7%95%D7%90%D7%95%D7%98%D7%95%D7%9E%D7%A6%D7%99%D7%94" target="_blank" rel="noopener">לדבר בוואטסאפ</a>
+      <a class="btn btn-ghost" href="/tools">לראות את ארגז הכלים</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a class="brand" href="/" style="margin-block-end:.8rem">
+          <svg class="brand-mark" viewBox="0 0 24 24" fill="none" stroke="#E2563C" stroke-width="1.6" aria-hidden="true">
+            <rect x="4" y="8" width="16" height="12" rx="2"/><path d="M12 8V4"/><circle cx="12" cy="3" r="1.4"/>
+            <path d="M9 13h.01M15 13h.01M9.5 16.5h5"/>
+          </svg>
+          AI Workshops Israel
+        </a>
+        <p style="color:var(--concrete-2);font-size:.9rem;max-width:30ch">הטמעת AI בארגונים: אבחון, בניית סוכנים, חיבור למערכות וממשל. חברה בת של AI Lectures.</p>
+      </div>
+      <div>
+        <h2>שירותים</h2>
+        <ul>
+          <li><a href="/workshops">כל הסדנאות</a></li>
+          <li><a href="/tools">ארגז הכלים</a></li>
+          <li><a href="/ai-leaders-course">קורס מובילי AI</a></li>
+          <li><a href="/#services">הטמעה ארגונית</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>סדנאות כלים</h2>
+        <ul>
+          <li><a href="/chatgpt-workshop">ChatGPT לארגונים</a></li>
+          <li><a href="/copilot-workshop">Microsoft Copilot 365</a></li>
+          <li><a href="/gemini-notebook-workshop">Gemini ו-Gemini Notebook</a></li>
+          <li><a href="/prompt-engineering-workshop">כתיבת פרומפטים</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>לפי מחלקה</h2>
+        <ul>
+          <li><a href="/sales-ai-workshop">מכירות</a></li>
+          <li><a href="/customer-service-ai-workshop">שירות ומוקדים</a></li>
+          <li><a href="/hr-ai-workshop">משאבי אנוש</a></li>
+          <li><a href="/workshops">כל הסדנאות ←</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fnote">
+      <span>AI Workshops Israel · חברה בת של AI Lectures</span>
+      <span>054-445-6795 · כל הזכויות שמורות</span>
+    </div>
+  </div>
+</footer>
+<script src="/site.js" defer></script>
+<script src="/page.js" defer></script>
+</body>
+</html>
