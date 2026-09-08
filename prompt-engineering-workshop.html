@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>סדנת כתיבת פרומפטים ו-Prompt Engineering | AI Workshops Israel</title>
+<meta name="description" content="סדנה מעשית בת שלוש שעות בשיטת העבודה מול מודלים: מבנה הנחיה, הקשר, פורמט פלט, בדיקה ותיקון — שיטה שעובדת בכל כלי ולא נשברת כשגרסה מתחלפת.">
+<link rel="canonical" href="https://aiworkshops.co.il/prompt-engineering-workshop">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#0B1730">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="he_IL">
+<meta property="og:site_name" content="AI Workshops Israel">
+<meta property="og:url" content="https://aiworkshops.co.il/prompt-engineering-workshop">
+<meta property="og:title" content="סדנת כתיבת פרומפטים ו-Prompt Engineering | AI Workshops Israel">
+<meta property="og:description" content="סדנה מעשית בת שלוש שעות בשיטת העבודה מול מודלים: מבנה הנחיה, הקשר, פורמט פלט, בדיקה ותיקון — שיטה שעובדת בכל כלי ולא נשברת כשגרסה מתחלפת.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400..900&family=Space+Grotesk:wght@500;700&display=swap">
+<link rel="stylesheet" href="/site.css">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://aiworkshops.co.il/#org", "name": "AI Workshops Israel", "url": "https://aiworkshops.co.il/", "telephone": "+972-54-445-6795", "areaServed": {"@type": "Country", "name": "IL"}}, {"@type": "Course", "name": "סדנת כתיבת פרומפטים ו-Prompt Engineering", "description": "סדנה מעשית בת שלוש שעות בשיטת העבודה מול מודלים: מבנה הנחיה, הקשר, פורמט פלט, בדיקה ותיקון — שיטה שעובדת בכל כלי ולא נשברת כשגרסה מתחלפת.", "url": "https://aiworkshops.co.il/prompt-engineering-workshop", "provider": {"@id": "https://aiworkshops.co.il/#org"}, "inLanguage": "he", "teaches": "כתיבת הנחיות אפקטיביות למודלי שפה: מבנה, הקשר, דוגמאות, פורמט פלט, שרשור שלבים, בדיקת פלט וזיהוי הזיות.", "hasCourseInstance": {"@type": "CourseInstance", "courseMode": ["onsite", "online"], "courseWorkload": "PT3H", "location": {"@type": "Place", "name": "במשרדי הארגון או אונליין", "address": {"@type": "PostalAddress", "addressCountry": "IL"}}}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "זה לא משהו שאפשר ללמוד ביוטיוב?", "acceptedAnswer": {"@type": "Answer", "text": "חלק, כן. מה שקשה ללמוד לבד זה לתרגל על המשימות שלכם ולקבל תיקון בזמן אמת על מה שכתבתם. רוב הזמן בסדנה מוקדש בדיוק לזה, ולא להרצאה."}}, {"@type": "Question", "name": "השיטה תלויה בכלי מסוים?", "acceptedAnswer": {"@type": "Answer", "text": "לא. אותם עקרונות עובדים ב-ChatGPT, ב-Copilot, ב-Gemini וב-Claude. זו בדיוק הסיבה שהסדנה הזאת מחזיקה גם אחרי שארגון מחליף פלטפורמה."}}, {"@type": "Question", "name": "צריך רישיונות בתשלום?", "acceptedAnswer": {"@type": "Answer", "text": "לא. אפשר לתרגל על חשבונות חינמיים. אם יש לכם רישיונות ארגוניים נשתמש בהם, כי אז אפשר לתרגל גם על מסמכים אמיתיים."}}, {"@type": "Question", "name": "כמה זמן לוקח לראות שיפור?", "acceptedAnswer": {"@type": "Answer", "text": "בסדנה עצמה. אנחנו מריצים את אותה משימה לפני ואחרי, והמשתתפים רואים את ההפרש על המסך. מה שלוקח יותר זמן זה ההרגל — ולכן הספרייה המשותפת חשובה כל כך."}}, {"@type": "Question", "name": "מה זה \"הזיה\" ואיך מזהים?", "acceptedAnswer": {"@type": "Answer", "text": "תשובה שנשמעת סבירה לחלוטין ואינה נכונה — שם של סעיף שלא קיים, מספר שלא הופיע במסמך, מקור שהומצא. בסדנה מתרגלים שלוש שיטות בדיקה פשוטות, והמשתתפים מריצים אותן על פלט אמיתי."}}, {"@type": "Question", "name": "אפשר לשלב עם סדנת כלי?", "acceptedAnswer": {"@type": "Answer", "text": "כן, וזה שילוב מוצלח. ארגונים רבים מעבירים קודם סדנת ChatGPT או Copilot להיכרות, ואחריה את סדנת הפרומפטים כדי לעבור מהתלהבות לשיטה."}}, {"@type": "Question", "name": "מה נשאר לארגון אחרי?", "acceptedAnswer": {"@type": "Answer", "text": "ספריית פרומפטים משותפת עם כללי שמות וגרסאות, ולפחות חמישה פרומפטים בדוקים לכל משתתף. הספרייה נמצאת אצלכם ואתם ממשיכים להוסיף אליה."}}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "בית", "item": "https://aiworkshops.co.il/"}, {"@type": "ListItem", "position": 2, "name": "סדנאות", "item": "https://aiworkshops.co.il/#services"}, {"@type": "ListItem", "position": 3, "name": "סדנת כתיבת פרומפטים", "item": "https://aiworkshops.co.il/prompt-engineering-workshop"}]}]}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">דילוג לתוכן</a>
+<header class="bar" id="bar">
+  <a class="brand" href="/">
+    <svg class="brand-mark" viewBox="0 0 24 24" fill="none" stroke="#E2563C" stroke-width="1.6" aria-hidden="true">
+      <rect x="4" y="8" width="16" height="12" rx="2"/><path d="M12 8V4"/><circle cx="12" cy="3" r="1.4"/>
+      <path d="M9 13h.01M15 13h.01M9.5 16.5h5"/>
+    </svg>
+    AI Workshops Israel
+  </a>
+  <button class="burger" id="burger" aria-label="תפריט" aria-expanded="false" aria-controls="menu">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <nav id="menu">
+    <a href="/#services">שירותים</a>
+    <a href="/ai-leaders-course">קורס מובילי AI</a>
+    <a href="/tools">הכלים</a>
+    <a href="/#reviews">ביקורות</a>
+    <a href="https://wa.me/972544456795?text=%D7%94%D7%99%D7%99%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%20AI%20Workshops%20Israel" target="_blank" rel="noopener">וואטסאפ</a>
+  </nav>
+</header>
+<a class="wafab" href="https://wa.me/972544456795?text=%D7%94%D7%99%D7%99%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%20AI%20Workshops%20Israel%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%93%D7%91%D7%A8%20%D7%A2%D7%9C%20%D7%94%D7%98%D7%9E%D7%A2%D7%AA%20AI%20%D7%91%D7%90%D7%A8%D7%92%D7%95%D7%9F" target="_blank" rel="noopener" aria-label="לדבר איתנו בוואטסאפ">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.8 1.2 3c.2.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3Z"/><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>
+  <span class="wafab__tip">לדבר בוואטסאפ</span>
+</a>
+
+<nav class="crumbs" aria-label="פירורי לחם" id="top">
+  <ol>
+    <li><a href="/">בית</a></li>
+    <li aria-hidden="true">←</li>
+    <li><a href="/#services">סדנאות</a></li>
+    <li aria-hidden="true">←</li>
+    <li>סדנת כתיבת פרומפטים</li>
+  </ol>
+</nav>
+
+<main id="main">
+
+<section class="phero">
+  <div class="wrap">
+    <p class="eyebrow">סדנת שיטה · שלוש שעות</p>
+    <h1>סדנת כתיבת פרומפטים ו-Prompt Engineering</h1>
+    <p class="lede">סדנת כתיבת פרומפטים היא מפגש בן שלוש שעות שמלמד את השיטה עצמה, לא כלי מסוים. משתתפים לומדים לבנות הנחיה שמחזירה פלט שאפשר להשתמש בו — עם ההקשר הנכון, בפורמט הנכון, ועם דרך לבדוק שהתשובה נכונה. השיטה עובדת ב-ChatGPT, ב-Copilot, ב-Gemini וב-Claude, ולא נשברת כשגרסה מתחלפת.</p>
+    <div class="outcome"><b>מה יוצא מזה</b>כל משתתף יוצא עם חמישה פרומפטים כתובים ובדוקים למשימות שהוא עושה בפועל, ועם ספריית פרומפטים משותפת שהצוות ממשיך לבנות.</div>
+    <div class="chips"><span class="chip"><b>3</b> שעות</span><span class="chip">ללא תלות בכלי</span><span class="chip">על המשימות שלכם</span><span class="chip">ספרייה שנשארת</span></div>
+    <div class="ctas">
+      <a class="btn btn-solid" href="https://wa.me/972544456795?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%A1%D7%93%D7%A0%D7%AA%20%D7%9B%D7%AA%D7%99%D7%91%D7%AA%20%D7%A4%D7%A8%D7%95%D7%9E%D7%A4%D7%98%D7%99%D7%9D" target="_blank" rel="noopener">לתאם את הסדנה</a>
+      <a class="btn btn-ghost" href="#syllabus">מה עושים בשלוש השעות</a>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">רקע</p>
+    <h2>למה זו הסדנה שמחזיקה הכי הרבה זמן</h2>
+    <p style="color:var(--concrete-2);margin-block-start:1.1rem;max-width:64ch">כלים מתחלפים. בשלוש השנים האחרונות ארגונים בישראל עברו בין ChatGPT, Copilot ו-Gemini, ובכל מעבר נזרקו חומרי הדרכה שלמים. מה שלא נזרק הוא השיטה: איך מנסחים בקשה כך שהמכונה תדע מה מצופה ממנה, איך נותנים לה את ההקשר שחסר לה, ואיך בודקים אם מה שחזר נכון.</p>
+    <p style="color:var(--concrete-2);margin-block-start:1.1rem;max-width:64ch">רוב האנשים כותבים בקשה של שורה וחצי ומקבלים תשובה כללית, ומסיקים שהכלי בינוני. בפועל הבעיה מוכרת: הם ביקשו "תכתוב לי מייל ללקוח" בלי לומר מי הלקוח, מה קרה עד עכשיו, מה המטרה של המייל, ובאיזה טון החברה מדברת. אדם שהיה מקבל את אותה בקשה היה שואל ארבע שאלות לפני שהתחיל. המודל לא שואל — הוא מנחש.</p>
+    <p style="color:var(--concrete-2);margin-block-start:1.1rem;max-width:64ch">הסדנה מלמדת ארבעה דברים: מה חייב להיכנס להנחיה, איך לבקש פורמט פלט קבוע שאפשר לעבוד איתו, מתי לפרק משימה לשלבים במקום לבקש הכול בבת אחת, ואיך לזהות תשובה שנשמעת בטוחה ואינה נכונה. את זה מתרגלים על משימות אמיתיות של המשתתפים.</p>
+  </div>
+</section>
+
+<section class="band band--alt" id="syllabus">
+  <div class="wrap">
+    <p class="eyebrow">מבנה הסדנה</p>
+    <h2>מה עושים בפועל</h2>
+    <p style="color:var(--concrete-2);margin-block-start:1.1rem;max-width:62ch">שלוש שעות מחולקות לשלושה חלקים. בכל חלק יש הסבר קצר ואחריו תרגול על חומר אמיתי שלכם — לא הרצאה של שלוש שעות עם תרגיל בסוף.</p>
+    <div class="syl">
+      <div class="syl__item">
+        <div>
+          <h3><span>שעה ראשונה</span>האנטומיה של הנחיה טובה</h3>
+          <ul><li>ארבעת המרכיבים: תפקיד, הקשר, משימה, פורמט פלט</li><li>דוגמה אחת טובה שווה מאה מילות הסבר — ואיך בוחרים אותה</li><li>מה קורה כשחסר הקשר: מריצים את אותה בקשה עם ובלי, ומשווים</li></ul>
+        </div>
+      </div>
+      <div class="syl__item">
+        <div>
+          <h3><span>שעה שנייה</span>משימות אמיתיות</h3>
+          <ul><li>כל משתתף לוקח משימה שהוא עושה כל שבוע ובונה עליה פרומפט</li><li>פורמט פלט קבוע: טבלה, שדות, אורך — כדי שאפשר יהיה להשוות ולתייק</li><li>שרשור: מתי לפרק לשלושה שלבים במקום לבקש הכול בבת אחת</li></ul>
+        </div>
+      </div>
+      <div class="syl__item">
+        <div>
+          <h3><span>שעה שלישית</span>בדיקה, תיקון וספרייה</h3>
+          <ul><li>איך בודקים פלט: מול מקור, מול מקרה קיצון, ומול מה שכבר יודעים</li><li>זיהוי הזיות — למה הן נשמעות דווקא משכנעות</li><li>בונים ספריית פרומפטים משותפת עם כללי שמות וגרסאות</li></ul>
+        </div>
+      </div></div>
+    <p class="syl__opt"><b>לפני המפגש:</b> אוספים מכל משתתף שתיים־שלוש משימות שהוא מבצע בפועל כל שבוע. אלה חומרי הגלם של הסדנה — לא נתרגל על דוגמאות מהאינטרנט.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">דוגמאות</p>
+    <h2>שלושה פרומפטים שנבנו בסדנאות</h2>
+    <p style="color:var(--concrete-2);margin-block-start:1.1rem;max-width:62ch">אלה דוגמאות מסדנאות קודמות. אצלכם הן ייראו אחרת, כי הן נבנות על התהליכים שעולים במיפוי שלפני המפגש.</p>
+    <div class="grid"><div class="cell"><span class="tag">שיווק</span><h3>טקסט בקול של החברה</h3><p>פרומפט שכולל דוגמאות אמיתיות מהטקסטים שלכם, רשימת מילים אסורות ואורך מוגדר — כדי שהפלט לא יישמע כמו כל חברה אחרת.</p><span class="len">תרגול בשעה השנייה</span></div><div class="cell"><span class="tag">כספים</span><h3>סיכום חוזה לשדות קבועים</h3><p>אותם שמונה שדות בכל פעם: צדדים, תקופה, הצמדה, סעיפי יציאה. הפורמט הקבוע הוא מה שהופך את זה לתהליך ולא לשיחה.</p><span class="len">תרגול בשעה השנייה</span></div><div class="cell"><span class="tag">שירות</span><h3>סיווג פנייה נכנסת</h3><p>פרומפט שמסווג פנייה לאחת מחמש קטגוריות ומוציא רמת דחיפות — כולל הוראה מפורשת מה לעשות כשהוא לא בטוח.</p><span class="len">תרגול בשעה השלישית</span></div></div>
+  </div>
+</section>
+
+<section class="band band--alt">
+  <div class="wrap">
+    <p class="eyebrow">הפרטים</p>
+    <h2>מה שכדאי לדעת מראש</h2>
+    <p style="color:var(--concrete-2);margin-block-start:1.1rem;max-width:62ch">כל מה שנשאלים לפני שסוגרים תאריך, במקום אחד. אם משהו כאן לא מתאים לכם — אפשר להתאים, ונאמר את זה בשיחה.</p>
+    <dl class="facts"><div><dt>פורמט</dt><dd><b>3 שעות</b>פרונטלי במשרדי הארגון או אונליין</dd></div><div><dt>דרישות קדם</dt><dd><b>אין</b>ולא נדרש רקע טכני</dd></div><div><dt>כלי</dt><dd><b>מה שיש לכם</b>השיטה זהה בכל הכלים המובילים</dd></div><div><dt>רישוי</dt><dd><b>לא נדרש</b>אפשר לתרגל על חשבונות חינמיים</dd></div><div><dt>תוצר</dt><dd><b>5 פרומפטים למשתתף</b>כתובים, בדוקים ושמורים</dd></div><div><dt>נשאר אחרי</dt><dd><b>ספרייה משותפת</b>עם כללי שמות וגרסאות</dd></div></dl>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">לפני ואחרי</p>
+    <h2>מה בדיוק משתנה בהנחיה</h2>
+    <div class="tbl-scroll">
+      <table>
+        <caption>דוגמאות מקוצרות מתוך הסדנה. ההבדל הוא לא באורך — הוא במה שנאמר.</caption>
+        <thead><tr><th scope="col">המשימה</th><th scope="col">מה שכותבים בדרך כלל</th><th scope="col">מה שלומדים לכתוב</th><th scope="col">למה זה עובד</th></tr></thead>
+        <tbody><tr><th scope="row">מייל ללקוח</th><td>"תכתוב מייל ללקוח על העיכוב"</td><td>תפקיד, מי הלקוח, מה קרה עד כה, מה המטרה, טון, אורך, ודוגמה למייל קודם שעבד</td><td>המודל לא שואל שאלות — מה שלא נאמר, הוא ממציא</td></tr><tr><th scope="row">סיכום מסמך</th><td>"תסכם לי את המסמך"</td><td>לאיזה קהל, אילו שדות בדיוק, מה לעשות עם מה שלא מופיע במסמך</td><td>פורמט קבוע הופך סיכום חד־פעמי לתהליך שאפשר להשוות בו</td></tr><tr><th scope="row">ניתוח נתונים</th><td>"תנתח לי את הטבלה"</td><td>מה מחפשים, מה נחשב חריג, ובאיזה פורמט להחזיר את הממצאים</td><td>בלי הגדרת חריג, כל מספר יכול להיראות מעניין</td></tr><tr><th scope="row">רעיונות</th><td>"תן לי רעיונות לקמפיין"</td><td>קהל, מגבלות תקציב, מה כבר ניסינו ונכשל, וכמה רעיונות בדיוק</td><td>המגבלות הן מה שמייצר רעיון ספציפי במקום רשימה גנרית</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="band band--alt">
+  <div class="wrap">
+    <p class="eyebrow">למי זה מתאים</p>
+    <h2>מי צריך לשבת בחדר</h2>
+    <p style="color:var(--concrete-2);margin-block-start:1.1rem;max-width:62ch">הסדנה עובדת הכי טוב כשבחדר יושבים אנשים שחולקים את אותם תהליכים. אלה הקבוצות שרואות ממנה הכי הרבה:</p>
+    <div class="aud">
+      <ul><li>צוותים שהתנסו בכלים ולא מרוצים מהתוצאות</li><li>ארגונים שעוברים בין כלים ולא רוצים ללמד מחדש בכל פעם</li><li>מחלקות עם משימות כתיבה או ניתוח חוזרות</li><li>מובילי AI פנימיים שצריכים ללמד את הצוות שלהם</li></ul>
+      <div class="note">
+        <h3>מה הסדנה הזאת לא</h3>
+        <p>היא לא סדנת כלי. לא נעבור מסך־מסך ולא נלמד איפה נמצא כפתור. אם הצוות עוד לא פתח אף כלי, עדיף להתחיל ב<a href="/ai-tools-intro-workshop" style="color:var(--patina)">סדנת שלושה כלים מובילים</a>.</p>
+        <p>והיא גם לא קורס בכתיבת קוד. אין כאן API, אין ספריות ואין תכנות — רק שיטה שכל עובד יכול ליישם למחרת.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="faq">
+  <div class="wrap">
+    <p class="eyebrow">שאלות שחוזרות</p>
+    <h2>על סדנת הפרומפטים</h2>
+    <div class="qa"><details open><summary>זה לא משהו שאפשר ללמוד ביוטיוב?</summary><div class="ans">חלק, כן. מה שקשה ללמוד לבד זה לתרגל על המשימות שלכם ולקבל תיקון בזמן אמת על מה שכתבתם. רוב הזמן בסדנה מוקדש בדיוק לזה, ולא להרצאה.</div></details><details><summary>השיטה תלויה בכלי מסוים?</summary><div class="ans">לא. אותם עקרונות עובדים ב-ChatGPT, ב-Copilot, ב-Gemini וב-Claude. זו בדיוק הסיבה שהסדנה הזאת מחזיקה גם אחרי שארגון מחליף פלטפורמה.</div></details><details><summary>צריך רישיונות בתשלום?</summary><div class="ans">לא. אפשר לתרגל על חשבונות חינמיים. אם יש לכם רישיונות ארגוניים נשתמש בהם, כי אז אפשר לתרגל גם על מסמכים אמיתיים.</div></details><details><summary>כמה זמן לוקח לראות שיפור?</summary><div class="ans">בסדנה עצמה. אנחנו מריצים את אותה משימה לפני ואחרי, והמשתתפים רואים את ההפרש על המסך. מה שלוקח יותר זמן זה ההרגל — ולכן הספרייה המשותפת חשובה כל כך.</div></details><details><summary>מה זה "הזיה" ואיך מזהים?</summary><div class="ans">תשובה שנשמעת סבירה לחלוטין ואינה נכונה — שם של סעיף שלא קיים, מספר שלא הופיע במסמך, מקור שהומצא. בסדנה מתרגלים שלוש שיטות בדיקה פשוטות, והמשתתפים מריצים אותן על פלט אמיתי.</div></details><details><summary>אפשר לשלב עם סדנת כלי?</summary><div class="ans">כן, וזה שילוב מוצלח. ארגונים רבים מעבירים קודם סדנת ChatGPT או Copilot להיכרות, ואחריה את סדנת הפרומפטים כדי לעבור מהתלהבות לשיטה.</div></details><details><summary>מה נשאר לארגון אחרי?</summary><div class="ans">ספריית פרומפטים משותפת עם כללי שמות וגרסאות, ולפחות חמישה פרומפטים בדוקים לכל משתתף. הספרייה נמצאת אצלכם ואתם ממשיכים להוסיף אליה.</div></details></div>
+  </div>
+</section>
+
+<section class="band band--alt">
+  <div class="wrap">
+    <p class="eyebrow">מסלולים סמוכים</p>
+    <h2>מה בא אחרי, או במקום</h2>
+    <p style="color:var(--concrete-2);margin-block-start:1.1rem;max-width:62ch">אפשר להזמין את הסדנה הזאת לבד, ואפשר לשלב אותה במסלול. בשני המקרים היא רצה על הכלים והתהליכים של הארגון שלכם.</p>
+    <div class="next"><a href="/ai-tools-intro-workshop"><h3>שלושה כלים מובילים</h3><p>אם הצוות עוד לא נגע בכלום.</p><span class="arrow">3 שעות ←</span></a><a href="/chatgpt-workshop"><h3>סדנת ChatGPT לארגונים</h3><p>ליישום השיטה בסביבה אחת לעומק.</p><span class="arrow">3 שעות ←</span></a><a href="/ai-leaders-course"><h3>קורס מובילי AI</h3><p>למי שילמד את השיטה הלאה בארגון.</p><span class="arrow">4 מפגשים ←</span></a></div>
+  </div>
+</section>
+
+<section class="ctaband" id="contact">
+  <div class="wrap">
+    <p class="eyebrow">צעד ראשון</p>
+    <h2>הכלים כבר אצלכם. השיטה עוד לא.</h2>
+    <p>שיחה קצרה, איסוף המשימות שחוזרות אצלכם כל שבוע, והתאמת התרגול אליהן.</p>
+    <div class="ctas">
+      <a class="btn btn-solid" href="https://wa.me/972544456795?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%A1%D7%93%D7%A0%D7%AA%20%D7%9B%D7%AA%D7%99%D7%91%D7%AA%20%D7%A4%D7%A8%D7%95%D7%9E%D7%A4%D7%98%D7%99%D7%9D" target="_blank" rel="noopener">לדבר בוואטסאפ</a>
+      <a class="btn btn-ghost" href="/tools">לראות את ארגז הכלים</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a class="brand" href="/" style="margin-block-end:.8rem">
+          <svg class="brand-mark" viewBox="0 0 24 24" fill="none" stroke="#E2563C" stroke-width="1.6" aria-hidden="true">
+            <rect x="4" y="8" width="16" height="12" rx="2"/><path d="M12 8V4"/><circle cx="12" cy="3" r="1.4"/>
+            <path d="M9 13h.01M15 13h.01M9.5 16.5h5"/>
+          </svg>
+          AI Workshops Israel
+        </a>
+        <p style="color:var(--concrete-2);font-size:.9rem;max-width:30ch">הטמעת AI בארגונים: אבחון, בניית סוכנים, חיבור למערכות וממשל. חברה בת של AI Lectures.</p>
+      </div>
+      <div>
+        <h2>שירותים</h2>
+        <ul>
+          <li><a href="/#services">הסדנאות</a></li>
+          <li><a href="/tools">ארגז הכלים</a></li>
+          <li><a href="/ai-leaders-course">קורס מובילי AI</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>סדנאות כלים</h2>
+        <ul>
+          <li><a href="/chatgpt-workshop">ChatGPT לארגונים</a></li>
+          <li><a href="/copilot-workshop">Microsoft Copilot 365</a></li>
+          <li><a href="/gemini-notebook-workshop">Gemini ו-Gemini Notebook</a></li>
+          <li><a href="/google-workspace-ai-workshop">Google Workspace עם AI</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>סדנאות שיטה</h2>
+        <ul>
+          <li><a href="/prompt-engineering-workshop">כתיבת פרומפטים</a></li>
+          <li><a href="/ai-productivity-workshop">פרודוקטיביות ואוטומציה</a></li>
+          <li><a href="/ai-tools-intro-workshop">שלושה כלים מובילים</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fnote">
+      <span>AI Workshops Israel · חברה בת של AI Lectures</span>
+      <span>054-445-6795 · כל הזכויות שמורות</span>
+    </div>
+  </div>
+</footer>
+<script src="/site.js" defer></script>
+<script src="/page.js" defer></script>
+</body>
+</html>
