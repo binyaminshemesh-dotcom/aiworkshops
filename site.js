@@ -10,11 +10,7 @@
   burger.addEventListener('click', function(){ setMenu(!menu.classList.contains('open')); });
   addEventListener('keydown', function(e){ if(e.key === 'Escape') setMenu(false); });
 
-  /* ── ניווט בין העמודים ───────────────────────────────────
-     שלושת העמודים חיים באותו מסמך. בהפקה אמיתית אלה שלושה
-     קבצים נפרדים ב-/ , /tools/ ו-/ai-leaders-course/ ,
-     והניווט הוא פשוט <a href>. כאן, בקובץ אחד, הראוטר
-     מחליף בין הסקציות — כך שהקישורים עובדים בכל הקשר. */
+  /* ניווט: כל עמוד הוא קובץ נפרד באתר, והניווט הוא <a href> רגיל. */
   var PAGES = {home:'p-home', tools:'p-tools', course:'p-course'};
   var current = 'home';
 
