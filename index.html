@@ -24,6 +24,19 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400..900&family=Space+Grotesk:wght@500;700&display=swap">
 <link rel="stylesheet" href="/site.css">
+<style>
+/* רשת כרטיסים ללא תאים ריקים בקצה */
+.grid{background:none;border:0;gap:1rem;margin-block-start:2rem}
+.grid .cell{border:1px solid var(--ink-3);background:var(--ink)}
+.grid a.cell:hover{background:var(--ink-2);border-color:var(--patina)}
+#who .grid{grid-template-columns:repeat(auto-fit,minmax(215px,1fr))}
+/* רצועת ארבעת השלבים מתחת לכותרת ההירו */
+.hero-track{display:flex;flex-wrap:wrap;gap:.5rem .4rem;align-items:center;margin-block-start:1.4rem;
+  font-family:var(--font-m);font-size:.78rem;letter-spacing:.08em;color:var(--concrete-2)}
+.hero-track span{border:1px solid var(--ink-3);border-radius:2px;padding:.3rem .7rem}
+.hero-track span + span{position:relative}
+</style>
+
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"Organization","@id":"https://aiworkshops.co.il/#org","name":"AI Workshops Israel","url":"https://aiworkshops.co.il/","description":"הטמעת AI בארגונים: אבחון תהליכים, בניית סוכנים, חיבור למערכות ארגוניות וממשל. חברה בת של AI Lectures.","telephone":"+972-54-445-6795","areaServed":{"@type":"Country","name":"IL"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"9","bestRating":"5"}},
@@ -71,43 +84,44 @@
         <div class="hero-col">
           <p class="eyebrow">הטמעת AI בארגונים</p>
           <h1><span class="hero-grad">AI שנכנס לתהליכים,</span>לא לרשימת הכלים.</h1>
-          <p class="hero-sub">אנחנו לוקחים ארגון מ״כולם מדברים על זה״ למצב שבו סוכנים רצים בייצור על תהליכים אמיתיים — מחוברים למערכות שכבר יש לכם, עם הרשאות, לוגים ומדד שמישהו אחראי עליו.</p>
+          <p class="hero-sub">אנחנו עוזרים לארגונים לעבור מהתנסות בכלי AI ליישום אמיתי בעבודה: זיהוי התהליכים שמתאימים, בניית הפתרון, חיבור למערכות הארגון, הכשרת העובדים וליווי ההטמעה.</p>
+          <p class="hero-track"><span>אבחון</span><span>הטמעה</span><span>הכשרה</span><span>ליווי</span></p>
         </div>
 
         <p class="herostats">
           <span><b>36+</b> ארגונים</span>
-          <span><b>50+</b> כלים לעבודה ארגונית</span>
+          <span><b>31</b> סדנאות בקטלוג</span>
           <span><b>20,000+</b> משתתפים</span>
         </p>
       </div>
 
       <!-- פולד 1 -->
       <div class="fold" data-fold="1">
-        <p class="eyebrow">ארבע דרכים לעבוד יחד</p>
-        <h2>מהחלטה <em>לייצור</em></h2>
+        <p class="eyebrow">שיטת העבודה</p>
+        <h2>איך אנחנו עוזרים לארגון <em>להטמיע AI</em></h2>
         <div class="beat-cards">
           <a class="jcard" href="#services" style="--acc:var(--minium)">
             <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18M3 12h12M3 17h7"/><circle cx="19" cy="16" r="3"/></svg>
-            <h3>פרויקט הטמעה</h3>
-            <p>מיפוי תהליכים, בניית הסוכנים, חיבור למערכות, מעבר לייצור. התחלה וסוף מוגדרים.</p>
+            <h3>מבינים איפה מתחילים</h3>
+            <p>מיפוי תהליכים, זיהוי הזדמנויות ותעדוף לפי ערך, מורכבות וסיכון.</p>
             <span class="go">לפירוט ←</span>
           </a>
-          <a class="jcard" href="#services" style="--acc:var(--patina)">
+          <a class="jcard" href="#process" style="--acc:var(--patina)">
             <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><circle cx="12" cy="12" r="4.5"/></svg>
-            <h3>ליווי מתמשך</h3>
-            <p>שעות חודשיות קבועות: תחזוקה, הרחבות, וטיפול במה שנשבר כשמערכת מתעדכנת.</p>
+            <h3>בונים ומטמיעים</h3>
+            <p>מפתרון נקודתי ועד סוכנים ותהליכים שמחוברים למערכות שהארגון כבר עובד איתן.</p>
             <span class="go">לפירוט ←</span>
           </a>
-          <a class="jcard" href="#services" style="--acc:var(--signal)">
-            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6.5v5c0 4.5 3.3 8.4 8 9.5 4.7-1.1 8-5 8-9.5v-5Z"/><path d="m9.2 12 2 2 3.6-3.8"/></svg>
-            <h3>אסטרטגיה וממשל</h3>
-            <p>מדיניות AI, הרשאות, מה מותר לסוכן ומה לא, ומפת דרכים שההנהלה יכולה לאשר.</p>
-            <span class="go">לפירוט ←</span>
+          <a class="jcard" href="#workshops" style="--acc:var(--signal)">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4 2.5 8.5 12 13l9.5-4.5Z"/><path d="M6 10.6V15c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.4"/></svg>
+            <h3>מכשירים את האנשים</h3>
+            <p>סדנאות AI לעובדים, למנהלים ולמחלקות — על הכלים והתהליכים הרלוונטיים להם.</p>
+            <span class="go">לסדנאות ←</span>
           </a>
           <a class="jcard" href="#services" style="--acc:var(--patina)">
-            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4 2.5 8.5 12 13l9.5-4.5Z"/><path d="M6 10.6V15c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.4"/></svg>
-            <h3>סדנאות והכשרה</h3>
-            <p>יום בודד או קורס מלא, עצמאי או כחלק מפרויקט. בכל מקרה — על הכלים והתהליכים שלכם.</p>
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6.5v5c0 4.5 3.3 8.4 8 9.5 4.7-1.1 8-5 8-9.5v-5Z"/><path d="m9.2 12 2 2 3.6-3.8"/></svg>
+            <h3>ממשיכים ומשפרים</h3>
+            <p>ליווי, הרחבת השימוש לתהליכים נוספים, תחזוקה ומדידה של התוצאות.</p>
             <span class="go">לפירוט ←</span>
           </a>
         </div>
@@ -150,23 +164,72 @@
       <p class="eyebrow">מי אנחנו</p>
       <h2>חברת ההטמעה של AI Lectures.</h2>
       <p>אחרי שנים של הרצאות וסדנאות ראינו את אותו דפוס חוזר: ארגון יוצא מיום הדרכה מלא מוטיבציה, ושלושה חודשים אחרי כלום לא השתנה בפועל. הפער אף פעם לא היה בידע — הוא היה בין הכיתה למערכות.</p>
-      <p>AI Workshops Israel הוקמה בדיוק בשביל הפער הזה. אנחנו עדיין מעבירים סדנאות — גם ימים בודדים — אבל הן לא עומדות לבד: אנחנו נכנסים לארגון, ממפים תהליכים אמיתיים, ובונים את הסוכנים שירוצו עליהם, מחוברים ל-CRM, לדרייב, למערכת הפניות ולמייל, עם הרשאות שה-IT אישר.</p>
+      <p>AI Workshops Israel הוקמה בדיוק בשביל הפער הזה. אנחנו עדיין מעבירים סדנאות — גם ימים בודדים — אבל הן לא עומדות לבד: אנחנו נכנסים לארגון, ממפים תהליכים אמיתיים, ובונים עליהם את הפתרון. אנחנו מחברים אותו למערכות שהארגון כבר עובד איתן, בתיאום עם ה-IT ולפי ההרשאות והמדיניות שלכם.</p>
       <p>אפשר להתחיל מסדנה אחת ולראות. אפשר גם להתחיל מהסוף.</p>
     </div>
     <dl class="spec">
       <div><dt>מודל עבודה</dt><dd>פרויקט הטמעה, ואחריו ליווי חודשי</dd></div>
-      <div><dt>מול מי עובדים</dt><dd>מנכ״ל, מנמ״ר או מנהל תפעול — ומול ה-IT בפועל</dd></div>
-      <div><dt>איפה הסוכנים רצים</dt><dd>בסביבה שלכם, עם ההרשאות שלכם</dd></div>
-      <div><dt>מה נמסר בסוף</dt><dd>סוכנים בייצור, תיעוד חיבורים, ומדד אחד למעקב</dd></div>
+      <div><dt>עם מי עובדים</dt><dd>הנהלה, IT, מנהלי מחלקות והעובדים עצמם</dd></div>
+      <div><dt>איפה הפתרון רץ</dt><dd>בסביבה שלכם, עם ההרשאות שלכם</dd></div>
+      <div><dt>מה נמסר בסוף</dt><dd>פתרון שעובד, תיעוד מלא, ומדד אחד למעקב</dd></div>
     </dl>
   </div>
 </section>
 
+<!-- איפה משתלב -->
+<section class="band band--alt" id="fits">
+  <div class="wrap">
+    <p class="eyebrow">מפת ההזדמנויות</p>
+    <h2>איפה AI יכול להשתלב בארגון</h2>
+    <p style="color:var(--concrete-2);margin-block-start:1rem;max-width:62ch">אלה המחלקות שבהן אנחנו נתקלים בהכי הרבה תהליכים חוזרים. לכל אחת יש גם סדנה ייעודית, ולרוב שם מתחילים.</p>
+    <div class="grid">
+      <a class="cell" href="/customer-service-ai-workshop"><span class="tag">שירות</span><h3>שירות ומוקדים</h3><p>סיכום שיחות, סיווג פניות, שליפה מתוך הידע הפנימי וסיוע לנציגים בזמן אמת.</p><span class="len">לסדנה ←</span></a>
+      <a class="cell" href="/sales-ai-workshop"><span class="tag">מכירות</span><h3>מכירות ופיתוח עסקי</h3><p>הכנה לפגישה, מחקר לקוח, ניסוח הצעות, סיכומים ומעקב אחרי שיחות ב-CRM.</p><span class="len">לסדנה ←</span></a>
+      <a class="cell" href="/hr-ai-workshop"><span class="tag">משאבי אנוש</span><h3>משאבי אנוש וגיוס</h3><p>מודעות ומיון, אונבורדינג, חומרי הדרכה ותקשורת פנים־ארגונית.</p><span class="len">לסדנה ←</span></a>
+      <a class="cell" href="/operations-ai-workshop"><span class="tag">תפעול</span><h3>תפעול ושרשרת אספקה</h3><p>מסמכים, אישורים, חריגים, בקשות חוזרות ותהליכים שעדיין נעשים ידנית.</p><span class="len">לסדנה ←</span></a>
+      <a class="cell" href="/ai-for-managers-workshop"><span class="tag">הנהלה</span><h3>הנהלה וניהול</h3><p>סיכומים, ניתוח מידע, חומרי החלטה — ובעיקר מה מותר לצוות לעשות.</p><span class="len">לסדנה ←</span></a>
+      <a class="cell" href="/rag-knowledge-workshop"><span class="tag">ידע</span><h3>ידע ומסמכים</h3><p>עוזר שעונה מתוך הנהלים והמסמכים שלכם, עם מקור לכל תשובה ועם הרשאות.</p><span class="len">לסדנה ←</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- סדנאות -->
+<section class="band" id="workshops">
+  <div class="wrap">
+    <p class="eyebrow">הכשרה</p>
+    <h2>סדנאות AI לארגונים</h2>
+    <p style="color:var(--concrete-2);margin-block-start:1rem;max-width:62ch">סדנאות מעשיות לעובדים, למנהלים ולמחלקות — אפשר להזמין מפגש עצמאי, ואפשר לשלב אותו כחלק מתהליך הטמעה. בשני המקרים הן רצות על הכלים והתהליכים של הארגון שלכם, ולא על דוגמאות גנריות.</p>
+    <div class="grid">
+      <a class="cell" href="/ai-for-managers-workshop"><span class="tag">מנהלים</span><h3>סדנת AI למנהלים</h3><p>העבודה של המנהל, ובעיקר: מה מותר לצוות שלו לעשות ואיפה עובר הגבול.</p><span class="len">3 שעות ←</span></a>
+      <a class="cell" href="/hr-ai-workshop"><span class="tag">משאבי אנוש</span><h3>סדנת AI למשאבי אנוש</h3><p>גיוס, מיון, למידה ופיתוח — ומה אסור לעשות עם מידע על מועמדים.</p><span class="len">3 שעות ←</span></a>
+      <a class="cell" href="/chatgpt-workshop"><span class="tag">כלי</span><h3>סדנת ChatGPT לארגונים</h3><p>מפרומפט בודד לתהליכי עבודה, GPTs מחלקתיים וחיבור לידע הארגוני.</p><span class="len">3 שעות ←</span></a>
+      <a class="cell" href="/copilot-workshop"><span class="tag">כלי</span><h3>סדנת Microsoft Copilot</h3><p>ה-AI שכבר יושב ב-Word, Outlook, Excel ו-Teams. בלי רכש נוסף.</p><span class="len">3 שעות ←</span></a>
+      <a class="cell" href="/sales-ai-workshop"><span class="tag">מכירות</span><h3>סדנת AI למכירות</h3><p>הזמן שלפני הפגישה ואחריה — שם הוא נשרף, ושם הכלי מחזיר אותו.</p><span class="len">3 שעות ←</span></a>
+      <a class="cell" href="/customer-service-ai-workshop"><span class="tag">שירות</span><h3>סדנת AI לשירות ומוקדים</h3><p>ניסוח, סיווג וסיכום — ומתי תשובה נשלחת בלי שאדם עובר עליה.</p><span class="len">3 שעות ←</span></a>
+    </div>
+    <p style="margin-block-start:1.6rem"><a href="/workshops" style="color:var(--minium-t);font-weight:600">לכל 31 הסדנאות ←</a></p>
+  </div>
+</section>
+
+<!-- תהליך -->
+<section class="band band--alt" id="process">
+  <div class="wrap">
+    <p class="eyebrow">רצף העבודה</p>
+    <h2>איך פרויקט הטמעה נראה בפועל</h2>
+    <div class="steps">
+      <div class="step"><div><h3>אבחון</h3><p>יושבים עם שלושה עד שישה בעלי תפקיד. מחפשים תהליכים שחוזרים הרבה, עולים זמן, ולא נוגעים במידע שאסור לגעת בו. יוצאים עם רשימה מדורגת ולא עם רעיונות.</p><span class="when">שבועות 1–2</span></div></div>
+      <div class="step"><div><h3>פיילוט על תהליך אחד</h3><p>בונים סוכן אחד, על התהליך שדורג ראשון, עם הצוות שמבצע אותו היום. עובד או לא עובד — יודעים תוך שבועיים, לפני שמישהו התחייב לתקציב גדול.</p><span class="when">שבועות 3–4</span></div></div>
+      <div class="step"><div><h3>חיבור לייצור</h3><p>הסוכן מחובר למערכות האמיתיות בתיאום עם ה-IT: הרשאות מוגדרות, לוגים, טיפול בשגיאות, והחלטה איפה אדם נשאר בלולאה. כאן נופלים רוב הפרויקטים, ולכן זה השלב הארוך.</p><span class="when">שבועות 5–9</span></div></div>
+      <div class="step"><div><h3>הרחבה ומסירה</h3><p>עוד שניים־שלושה תהליכים על אותה תשתית, הכשרה של הצוותים, תיעוד החיבורים, ואיש קשר בארגון שיודע לתחזק. משם — ליווי חודשי או פרידה מסודרת.</p><span class="when">שבועות 10–12</span></div></div>
+    </div>
+  </div>
+</section>
+
 <!-- שירותים -->
-<section class="band band--alt" id="services">
+<section class="band" id="services">
   <div class="wrap">
     <p class="eyebrow">מה אנחנו עושים</p>
-    <h2>ארבעה שירותים, ובדרך כלל בסדר הזה</h2>
+    <h2>מתהליך ראשון ועד הטמעה בארגון</h2>
     <div class="grid">
       <a class="cell" href="https://wa.me/972544456795?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%90%D7%91%D7%97%D7%95%D7%9F%20AI%20%D7%9C%D7%90%D7%A8%D7%92%D7%95%D7%9F" target="_blank" rel="noopener">
         <span class="tag">שלב ראשון</span><h3>אבחון והזדמנויות</h3>
@@ -186,7 +249,7 @@
         <span class="len">3–4 שבועות</span></a>
       <a class="cell" href="https://wa.me/972544456795?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%97%D7%99%D7%91%D7%95%D7%A8%20AI%20%D7%9C%D7%9E%D7%A2%D7%A8%D7%9B%D7%95%D7%AA%20%D7%94%D7%90%D7%A8%D7%92%D7%95%D7%9F" target="_blank" rel="noopener">
         <span class="tag">טכני</span><h3>חיבור למערכות</h3>
-        <p>CRM, ERP, דרייב, מייל, מערכת פניות. הרשאות ברמת המסמך, לוגים שאפשר לחקור, וטיפול בשגיאות.</p>
+        <p>CRM, ERP, דרייב, מייל ומערכת פניות — בתיאום עם ה-IT, לפי ההרשאות והמדיניות של הארגון.</p>
         <span class="len">בתוך הפרויקט</span></a>
       <a class="cell" href="https://wa.me/972544456795?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%94%D7%9B%D7%A9%D7%A8%D7%AA%20%D7%94%D7%A6%D7%95%D7%95%D7%AA%D7%99%D7%9D" target="_blank" rel="noopener">
         <span class="tag">משלים</span><h3>הכשרת הצוותים</h3>
@@ -196,51 +259,30 @@
   </div>
 </section>
 
-<!-- סדנאות -->
-<section class="band" id="workshops">
+<!-- עם מי עובדים -->
+<section class="band band--alt" id="who">
   <div class="wrap">
-    <p class="eyebrow">הכשרה</p>
-    <h2>שתי נקודות כניסה, וקטלוג מלא מאחוריהן</h2>
-    <p style="color:var(--concrete-2);margin-block-start:1rem;max-width:60ch">אלה שתי הסדנאות שרוב הארגונים מתחילים בהן. מעבר להן יש <a href="/workshops" style="color:var(--patina)">קטלוג של 26 סדנאות</a> — לפי כלי, לפי מחלקה, ולפי ממשל ואבטחה. אפשר להזמין סדנה בודדת, ואפשר לשלב אותה בפרויקט הטמעה; בשני המקרים היא רצה על הכלים והתהליכים של הארגון שלכם.</p>
+    <p class="eyebrow">בעלי העניין</p>
+    <h2>עם מי אנחנו עובדים</h2>
+    <p style="color:var(--concrete-2);margin-block-start:1rem;max-width:62ch">פרויקט הטמעה נוגע בארבעה מעגלים בארגון. כשאחד מהם לא בחדר, הפרויקט נתקע באמצע — ולכן אנחנו מבקשים את כולם כבר באבחון.</p>
     <div class="grid">
-      <a class="cell" href="/claude-code-workshop">
-        <span class="tag">טכני</span><h3>סדנת Claude Code</h3>
-        <p>בנייה עם סוכן שעובד על קבצים, מסמכים ומאגרי קוד. לצוותי פיתוח, אנליסטים ומי שכבר עבר את שלב הצ׳אט.</p>
-        <span class="len">יום · 6 שעות ←</span></a>
-      <a class="cell" href="/ai-beginners-workshop">
-        <span class="tag">בסיס</span><h3>AI למתחילים</h3>
-        <p>נקודת הכניסה לצוותים שלא נגעו בזה. מהצ׳אט הראשון ועד תהליך עבודה יומיומי — בלי מונחים ובלי קוד.</p>
-        <span class="len">3 שעות ←</span></a>
+      <a class="cell" href="/ai-governance-workshop"><span class="tag">01</span><h3>הנהלה</h3><p>החלטות, סדרי עדיפויות, תקציב ומדיניות AI שאפשר לאשר.</p><span class="len">משילות AI ←</span></a>
+      <a class="cell" href="/cio-ciso-ai-workshop"><span class="tag">02</span><h3>IT ואבטחת מידע</h3><p>מערכות, הרשאות, אבטחה ואינטגרציות — ומה מותר להוציא החוצה.</p><span class="len">למנמ״ר ו-CISO ←</span></a>
+      <a class="cell" href="/workshops"><span class="tag">03</span><h3>מנהלי מחלקות</h3><p>התהליכים וההזדמנויות בתוך היחידה העסקית, ומי יבצע בפועל.</p><span class="len">לפי מחלקה ←</span></a>
+      <a class="cell" href="/ai-beginners-workshop"><span class="tag">04</span><h3>העובדים</h3><p>הכשרה ושינוי הרגלי עבודה. בלי זה הפתרון קיים ואף אחד לא משתמש בו.</p><span class="len">AI למתחילים ←</span></a>
     </div>
   </div>
 </section>
 
-<!-- תהליך -->
-<section class="band" id="process">
+<!-- למה אנחנו -->
+<section class="band" id="why">
   <div class="wrap">
-    <p class="eyebrow">רצף העבודה</p>
-    <h2>איך פרויקט הטמעה נראה בפועל</h2>
-    <div class="steps">
-      <div class="step"><div><h3>אבחון</h3><p>יושבים עם שלושה עד שישה בעלי תפקיד. מחפשים תהליכים שחוזרים הרבה, עולים זמן, ולא נוגעים במידע שאסור לגעת בו. יוצאים עם רשימה מדורגת ולא עם רעיונות.</p><span class="when">שבועות 1–2</span></div></div>
-      <div class="step"><div><h3>פיילוט על תהליך אחד</h3><p>בונים סוכן אחד, על התהליך שדורג ראשון, עם הצוות שמבצע אותו היום. עובד או לא עובד — יודעים תוך שבועיים, לפני שמישהו התחייב לתקציב גדול.</p><span class="when">שבועות 3–4</span></div></div>
-      <div class="step"><div><h3>חיבור לייצור</h3><p>הסוכן מחובר למערכות האמיתיות בתיאום עם ה-IT: הרשאות מוגדרות, לוגים, טיפול בשגיאות, והחלטה איפה אדם נשאר בלולאה. כאן נופלים רוב הפרויקטים, ולכן זה השלב הארוך.</p><span class="when">שבועות 5–9</span></div></div>
-      <div class="step"><div><h3>הרחבה ומסירה</h3><p>עוד שניים־שלושה תהליכים על אותה תשתית, הכשרה של הצוותים, תיעוד החיבורים, ואיש קשר בארגון שיודע לתחזק. משם — ליווי חודשי או פרידה מסודרת.</p><span class="when">שבועות 10–12</span></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- שאלות -->
-<section class="band" id="faq">
-  <div class="wrap">
-    <p class="eyebrow">שאלות שחוזרות</p>
-    <h2>מה שואלים לפני שמאשרים פרויקט</h2>
-    <div class="qa">
-      <details open><summary>לאן הולך המידע שלנו?</summary><div class="ans">לשום מקום שלא אישרתם. עובדים בתוך הסביבה הארגונית ועם הרישיונות שכבר יש לכם, ולפני שורת קוד ראשונה מסכמים בכתב אילו מקורות מידע הסוכן נוגע בהם ואילו לא. כשהמידע לא יכול לצאת מהרשת — מתקינים את מנוע האורקסטרציה על שרת שלכם.</div></details>
-      <details><summary>מה ה-IT שלנו צריך לעשות?</summary><div class="ans">פחות ממה שחוששים. ברוב הפרויקטים מדובר בהגדרת הרשאות ובאישור חיבור למערכת אחת או שתיים. אנחנו מגיעים עם רשימת דרישות מסודרת לפני הפגישה הראשונה עם ה-IT, ולא מבקשים לפתוח שום דבר החוצה בלי הסבר למה.</div></details>
-      <details><summary>איך נדע שזה החזיר?</summary><div class="ans">מסכימים על מדד אחד לפני שמתחילים — שעות שנחסכו בתהליך, זמן תגובה, אחוז פניות שנסגרות בלי אדם. מודדים אותו לפני הפיילוט ואחריו. אם המספר לא זז, זה נאמר בפגישת הסיכום ולא נטמן מתחת לשקף.</div></details>
-      <details><summary>מה קורה אם נרצה להיפרד מכם?</summary><div class="ans">תיעוד החיבורים והתהליכים הוא חלק מהמסירה, לא תוספת בתשלום. הסוכנים רצים בחשבונות שלכם, על רישיונות שלכם. אנחנו לא מחזיקים אף מפתח שבלעדיו זה נעצר.</div></details>
-      <details><summary>מה אם הכלים ישתנו בעוד חצי שנה?</summary><div class="ans">התהליך והמדד נשארים; המנוע מתחלף. אם החיבורים תועדו, מעבר בין פלטפורמות הוא עבודה של ימים ולא של פרויקט חדש. זו בדיוק הסיבה שאנחנו לא נועלים ארגון על ספק אחד.</div></details>
-      <details><summary>למה לא לעשות את זה עם הצוות הפנימי?</summary><div class="ans">לפעמים כדאי, ואנחנו נגיד את זה. כשיש צוות פיתוח פנוי ומנוסה, התפקיד שלנו מצטמצם לאבחון, לממשל ולהכשרה. הפער אצל רוב הארגונים הוא לא יכולת — הוא זמן פנוי, ומי שכבר עשה את זה עשרים פעם.</div></details>
+    <p class="eyebrow">הבידול</p>
+    <h2>למה AI Workshops Israel</h2>
+    <div class="grid">
+      <div class="cell"><span class="tag">01</span><h3>לא נשארים בכיתה</h3><p>ההדרכה יכולה להיות נקודת הפתיחה לתהליך אמיתי, ולא אירוע שנגמר כשהמצגת נסגרת.</p></div>
+      <div class="cell"><span class="tag">02</span><h3>עובדים על התהליכים שלכם</h3><p>לפני כל מפגש יש מיפוי. התרגול נעשה על המסמכים והתהליכים שלכם, לא על דוגמאות גנריות.</p></div>
+      <div class="cell"><span class="tag">03</span><h3>מוסרים משהו שעובד</h3><p>פתרון, תיעוד ומדד אחד ברור להצלחה — שאפשר לבדוק חודש אחרי, לא רק להרגיש.</p></div>
     </div>
   </div>
 </section>
@@ -306,15 +348,35 @@
   </div>
 </section>
 
+<!-- שאלות -->
+<section class="band" id="faq">
+  <div class="wrap">
+    <p class="eyebrow">שאלות שחוזרות</p>
+    <h2>מה שואלים לפני שמאשרים פרויקט</h2>
+    <div class="qa">
+      <details open><summary>לאן הולך המידע שלנו?</summary><div class="ans">לשום מקום שלא אישרתם. עובדים בתוך הסביבה הארגונית ועם הרישיונות שכבר יש לכם, ולפני שורת קוד ראשונה מסכמים בכתב אילו מקורות מידע הסוכן נוגע בהם ואילו לא. כשהמידע לא יכול לצאת מהרשת — מתקינים את מנוע האורקסטרציה על שרת שלכם.</div></details>
+      <details><summary>מה ה-IT שלנו צריך לעשות?</summary><div class="ans">פחות ממה שחוששים. ברוב הפרויקטים מדובר בהגדרת הרשאות ובאישור חיבור למערכת אחת או שתיים. אנחנו מגיעים עם רשימת דרישות מסודרת לפני הפגישה הראשונה עם ה-IT, ולא מבקשים לפתוח שום דבר החוצה בלי הסבר למה.</div></details>
+      <details><summary>איך נדע שזה החזיר?</summary><div class="ans">מסכימים על מדד אחד לפני שמתחילים — שעות שנחסכו בתהליך, זמן תגובה, אחוז פניות שנסגרות בלי אדם. מודדים אותו לפני הפיילוט ואחריו. אם המספר לא זז, זה נאמר בפגישת הסיכום ולא נטמן מתחת לשקף.</div></details>
+      <details><summary>מה קורה אם נרצה להיפרד מכם?</summary><div class="ans">תיעוד החיבורים והתהליכים הוא חלק מהמסירה, לא תוספת בתשלום. הסוכנים רצים בחשבונות שלכם, על רישיונות שלכם. אנחנו לא מחזיקים אף מפתח שבלעדיו זה נעצר.</div></details>
+      <details><summary>מה אם הכלים ישתנו בעוד חצי שנה?</summary><div class="ans">התהליך והמדד נשארים; המנוע מתחלף. אם החיבורים תועדו, מעבר בין פלטפורמות הוא עבודה של ימים ולא של פרויקט חדש. זו בדיוק הסיבה שאנחנו לא נועלים ארגון על ספק אחד.</div></details>
+      <details><summary>אפשר להתחיל מסדנה אחת?</summary><div class="ans">כן, וזו ההתחלה הנפוצה ביותר. סדנה בודדת היא דרך זולה לבדוק אם יש כאן משהו — למי בארגון זה מדבר, אילו תהליכים עולים מהחדר, ומה רמת הבשלות בפועל. הרבה פרויקטי הטמעה אצלנו התחילו בדיוק כך.</div></details>
+      <details><summary>אתם גם מטמיעים בפועל או רק מייעצים?</summary><div class="ans">גם וגם, וזה בדיוק הבידול. אנחנו לא מוסרים מסמך המלצות ונעלמים: אנחנו בונים את הפתרון, מחברים אותו למערכות בתיאום עם ה-IT, ומלווים עד שהוא רץ. אפשר גם להזמין רק את שכבת האבחון והממשל אם יש לכם צוות פיתוח פנימי.</div></details>
+      <details><summary>אנחנו עובדים עם Microsoft 365. זה מתאים?</summary><div class="ans">מתאים מאוד, ולרוב זה גם המסלול הקצר ביותר. בארגוני מיקרוסופט מתחילים לרוב מ-Copilot שכבר כלול ברישיון, ומתקדמים ל-Copilot Studio ול-Power Automate — בלי ספק חדש לאשר ובלי לפתוח שום דבר החוצה. אותו היגיון תקף לארגוני Google Workspace.</div></details>
+      <details><summary>אין לנו עדיין מדיניות AI. מאיפה מתחילים?</summary><div class="ans">לא צריך מדיניות מלאה כדי להתחיל, אבל כן צריך כמה כללים בכתב — מה לא עולה לשום כלי, ומי מאשר. זה נסגר בשיחה אחת לפני הסדנה הראשונה. המדיניות המלאה נבנית בהמשך, ולרוב אחרי שכבר יש התנסות אמיתית שאפשר להישען עליה.</div></details>
+      <details><summary>למה לא לעשות את זה עם הצוות הפנימי?</summary><div class="ans">לפעמים כדאי, ואנחנו נגיד את זה. כשיש צוות פיתוח פנוי ומנוסה, התפקיד שלנו מצטמצם לאבחון, לממשל ולהכשרה. הפער אצל רוב הארגונים הוא לא יכולת — הוא זמן פנוי, ומי שכבר עשה את זה עשרים פעם.</div></details>
+    </div>
+  </div>
+</section>
+
 <!-- סיום -->
 <section class="band close" id="contact">
   <div class="wrap">
     <p class="eyebrow">צעד ראשון</p>
-    <h2>עשרים דקות, בלי מצגת.</h2>
-    <p>ספרו לנו על תהליך אחד שאוכל לכם זמן, ונגיד אם יש שם סוכן או שלא. גם „לא, זה לא מתאים ל-AI” היא תשובה שאנחנו נותנים.</p>
+    <h2>יש תהליך אחד שאוכל לכם יותר מדי זמן?</h2>
+    <p>ספרו לנו עליו בעשרים דקות, בלי מצגת. נבדוק יחד אם AI יכול לשפר אותו — ואם לא, נגיד לכם גם את זה.</p>
     <div class="ctas">
       <a class="btn btn-solid" href="https://wa.me/972544456795?text=%D7%94%D7%99%D7%99%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%AA%D7%90%D7%9D%20%D7%A9%D7%99%D7%97%D7%94%20%D7%A2%D7%9C%20%D7%94%D7%98%D7%9E%D7%A2%D7%AA%20AI%20%D7%91%D7%90%D7%A8%D7%92%D7%95%D7%9F" target="_blank" rel="noopener">לדבר בוואטסאפ</a>
-      <a class="btn btn-ghost" href="#services">לעבור על השירותים</a>
+      <a class="btn btn-ghost" href="/workshops">לראות את כל הסדנאות</a>
     </div>
   </div>
 </section>
