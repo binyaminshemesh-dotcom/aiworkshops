@@ -32,7 +32,8 @@
 .case__n{font-family:var(--font-m);font-size:.86rem;color:var(--minium-t);padding-block-start:.5rem}
 .case__tag{font-family:var(--font-m);font-size:.7rem;letter-spacing:.11em;text-transform:uppercase;color:var(--patina)}
 .case h2{font-size:clamp(1.25rem,2.6vw,1.75rem);margin:.35rem 0 0}
-.case__parts{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-block-start:1.5rem}
+.case__parts{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-block-start:1.5rem}
+@media(max-width:880px){.case__parts{grid-template-columns:1fr}}
 .case__parts div{background:var(--ink);border:1px solid var(--ink-3);padding:1.25rem 1.25rem}
 .case__parts dt{font-family:var(--font-m);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;
   color:var(--concrete);margin-block-end:.5rem}

@@ -35,7 +35,9 @@
 .legal b{color:var(--concrete)}
 .legal a{color:var(--minium-t)}
 .stamp{font-family:var(--font-m);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--concrete-2);border:1px solid var(--ink-3);padding:.35rem .7rem;display:inline-block;border-radius:2px}
-.kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin-block-start:2rem}
+.kv{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-block-start:2rem}
+.kv>div:last-child{grid-column:1/-1}
+@media(max-width:700px){.kv{grid-template-columns:1fr}.kv>div:last-child{grid-column:auto}}
 .kv div{background:var(--ink);border:1px solid var(--ink-3);padding:1.25rem 1.3rem}
 .kv dt{font-family:var(--font-m);font-size:.7rem;letter-spacing:.09em;text-transform:uppercase;color:var(--patina);margin-block-end:.4rem}
 .kv dd{margin:0;font-size:.95rem;color:var(--concrete-2)}
