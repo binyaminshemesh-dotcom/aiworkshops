@@ -65,33 +65,8 @@
 {
  "@context": "https://schema.org",
  "@graph": [
-  {
-   "@type": "Organization",
-   "@id": "https://aiworkshops.co.il/#org",
-   "name": "AI Workshops Israel",
-   "url": "https://aiworkshops.co.il/",
-   "telephone": "+972-54-445-6795",
-   "email": "ben@ailectures.co.il",
-   "areaServed": {
-    "@type": "Country",
-    "name": "IL"
-   },
-   "parentOrganization": {
-    "@type": "Organization",
-    "name": "AI Lectures"
-   }
-  },
-  {
-   "@type": "Person",
-   "@id": "https://aiworkshops.co.il/about#ben",
-   "name": "בנימין שמש",
-   "image": "https://aiworkshops.co.il/ben-shemesh.jpg",
-   "email": "ben@ailectures.co.il",
-   "worksFor": {
-    "@id": "https://aiworkshops.co.il/#org"
-   },
-   "url": "https://aiworkshops.co.il/about"
-  },
+  {"@type": "Organization", "@id": "https://aiworkshops.co.il/#org", "name": "AI Workshops Israel", "url": "https://aiworkshops.co.il/", "description": "הטמעת AI בארגונים: אבחון תהליכים, בניית סוכנים, חיבור למערכות ארגוניות וממשל. חברה בת של AI Lectures.", "telephone": "+972-54-445-6795", "email": "ben@ailectures.co.il", "areaServed": {"@type": "Country", "name": "IL"}, "founder": {"@id": "https://aiworkshops.co.il/about#ben"}, "parentOrganization": {"@type": "Organization", "@id": "https://www.ailectures.co.il/#org", "name": "AI Lectures", "url": "https://www.ailectures.co.il/", "sameAs": ["https://www.linkedin.com/in/ailectures/", "https://www.youtube.com/@ailectures", "https://www.instagram.com/ailectures", "https://x.com/ailectures"]}, "contactPoint": {"@type": "ContactPoint", "telephone": "+972-54-445-6795", "email": "ben@ailectures.co.il", "contactType": "sales", "areaServed": "IL", "availableLanguage": ["he", "en"]}, "knowsAbout": ["הטמעת בינה מלאכותית בארגונים", "סדנאות AI לארגונים", "הכשרת עובדים ומנהלים לשימוש ב-AI", "בניית סוכני AI ואוטומציה", "מדיניות AI וממשל ארגוני", "אבטחת מידע בשימוש בכלי AI", "ChatGPT לארגונים", "Microsoft Copilot", "Google Gemini", "הנדסת פרומפטים"]},
+  {"@type": "Person", "@id": "https://aiworkshops.co.il/about#ben", "name": "בנימין שמש", "jobTitle": "מייסד ומנהל ההטמעה", "image": "https://aiworkshops.co.il/ben-shemesh.jpg", "email": "ben@ailectures.co.il", "url": "https://aiworkshops.co.il/about", "worksFor": {"@id": "https://aiworkshops.co.il/#org"}, "sameAs": ["https://www.linkedin.com/in/ailectures/"], "knowsAbout": ["הטמעת בינה מלאכותית בארגונים", "סדנאות AI לארגונים", "הכשרת עובדים ומנהלים לשימוש ב-AI", "בניית סוכני AI ואוטומציה", "מדיניות AI וממשל ארגוני", "אבטחת מידע בשימוש בכלי AI", "ChatGPT לארגונים", "Microsoft Copilot", "Google Gemini", "הנדסת פרומפטים"]},
   {
    "@type": "AboutPage",
    "name": "אודות",
@@ -142,6 +117,7 @@
   <nav id="menu">
     <a href="/workshops">סדנאות</a>
     <a href="/tools">הכלים</a>
+    <a href="/knowledge">מרכז ידע</a>
     <a href="/case-studies">דוגמאות</a>
     <a href="/about" aria-current="page">אודות</a>
     <a href="/contact">יצירת קשר</a>
@@ -166,7 +142,7 @@
   <div class="wrap">
     <p class="eyebrow">אודות</p>
     <h1>הפער שבין הכיתה למערכות</h1>
-    <p class="lede">AI Workshops Israel היא חברת ההטמעה של AI Lectures. אנחנו עושים את החלק שקורה אחרי יום ההדרכה — נכנסים לארגון, ממפים תהליכים אמיתיים, ובונים עליהם את מה שירוץ בפועל.</p>
+    <p class="lede">AI Workshops Israel היא חברת ההטמעה של <a href="https://www.ailectures.co.il/">AI Lectures</a>. אנחנו עושים את החלק שקורה אחרי יום ההדרכה — נכנסים לארגון, ממפים תהליכים אמיתיים, ובונים עליהם את מה שירוץ בפועל.</p>
     <div class="chips"><span class="chip">חברה בת של AI Lectures</span><span class="chip">36+ ארגונים</span><span class="chip">בלי עמלות מספקים</span></div>
   </div>
 </section>
@@ -260,6 +236,7 @@
         <ul>
           <li><a href="/workshops">כל הסדנאות</a></li>
           <li><a href="/tools">ארגז הכלים</a></li>
+          <li><a href="/knowledge">מרכז הידע</a></li>
           <li><a href="/ai-agents-workshop">סוכני AI ואוטומציה</a></li>
           <li><a href="/#services">הטמעה ארגונית</a></li>
           <li><a href="/case-studies">דוגמאות לפרויקטים</a></li>
@@ -274,6 +251,7 @@
           <li><a href="/copilot-workshop">Microsoft Copilot 365</a></li>
           <li><a href="/gemini-notebook-workshop">Gemini ו-Gemini Notebook</a></li>
           <li><a href="/prompt-engineering-workshop">כתיבת פרומפטים</a></li>
+          <li><a href="/claude-code-workshop">Claude Code</a></li>
         </ul>
       </div>
       <div>
@@ -283,6 +261,7 @@
           <li><a href="/customer-service-ai-workshop">שירות ומוקדים</a></li>
           <li><a href="/hr-ai-workshop">משאבי אנוש</a></li>
           <li><a href="/ai-for-managers-workshop">AI למנהלים</a></li>
+          <li><a href="/admin-ai-workshop">לשכה ואדמיניסטרציה</a></li>
         </ul>
       </div>
       <div>
@@ -296,7 +275,7 @@
       </div>
     </div>
     <div class="fnote">
-      <span>AI Workshops Israel · חברה בת של AI Lectures</span>
+      <span>AI Workshops Israel · חברה בת של <a href="https://www.ailectures.co.il/">AI Lectures</a></span>
       <span><a href="/privacy">תקנון פרטיות</a> · <a href="/accessibility">הצהרת נגישות</a></span>
       <span>כל הזכויות שמורות</span>
     </div>
