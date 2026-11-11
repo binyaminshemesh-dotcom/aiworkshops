@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>אבטחת מידע ובינה מלאכותית בארגונים | מרכז הידע</title>
+<meta name="description" content="איפה הסיכון האמיתי בשימוש ארגוני ב-AI: שישה סיכונים לפי שכיחות, למה הסוכן יורש את ההרשאות של המשתמש, מה לבדוק מול ספק ואילו בקרות באמת נאכפות.">
+<link rel="canonical" href="https://aiworkshops.co.il/knowledge/ai-security">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#0B1730">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="he_IL">
+<meta property="og:site_name" content="AI Workshops Israel">
+<meta property="og:url" content="https://aiworkshops.co.il/knowledge/ai-security">
+<meta property="og:title" content="אבטחת מידע ובינה מלאכותית בארגונים | מרכז הידע">
+<meta property="og:description" content="איפה הסיכון האמיתי בשימוש ארגוני ב-AI: שישה סיכונים לפי שכיחות, למה הסוכן יורש את ההרשאות של המשתמש, מה לבדוק מול ספק ואילו בקרות באמת נאכפות.">
+<meta property="og:image" content="https://aiworkshops.co.il/og-home.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://aiworkshops.co.il/og-home.jpg">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400..900&family=Space+Grotesk:wght@500;700&display=swap">
+<link rel="stylesheet" href="/site.css">
+<style>
+/* מרכז הידע: גוף מאמר — תיבת הערה, רשימות ממוספרות וטבלאות */
+.band .note{background:var(--ink);padding:1.3rem 1.35rem;border-block-start:2px solid var(--patina);margin-block-start:2rem}
+.band .note h3{font-size:1.1rem}
+.band .note p{color:var(--concrete-2);font-size:.95rem;margin-block-start:.5rem;max-width:66ch}
+.band ol{padding-inline-start:1.4rem;margin:0}
+.band ol li{margin-block-end:.9rem}
+.band ol li::marker{color:var(--minium-t);font-family:var(--font-m);font-size:.85rem}
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://aiworkshops.co.il/#org", "name": "AI Workshops Israel", "url": "https://aiworkshops.co.il/", "description": "הטמעת AI בארגונים: אבחון תהליכים, בניית סוכנים, חיבור למערכות ארגוניות וממשל. חברה בת של AI Lectures.", "telephone": "+972-54-445-6795", "email": "ben@ailectures.co.il", "areaServed": {"@type": "Country", "name": "IL"}, "founder": {"@id": "https://aiworkshops.co.il/about#ben"}, "parentOrganization": {"@type": "Organization", "@id": "https://www.ailectures.co.il/#org", "name": "AI Lectures", "url": "https://www.ailectures.co.il/", "sameAs": ["https://www.linkedin.com/in/ailectures/", "https://www.youtube.com/@ailectures", "https://www.instagram.com/ailectures", "https://x.com/ailectures"]}, "contactPoint": {"@type": "ContactPoint", "telephone": "+972-54-445-6795", "email": "ben@ailectures.co.il", "contactType": "sales", "areaServed": "IL", "availableLanguage": ["he", "en"]}, "knowsAbout": ["הטמעת בינה מלאכותית בארגונים", "סדנאות AI לארגונים", "הכשרת עובדים ומנהלים לשימוש ב-AI", "בניית סוכני AI ואוטומציה", "מדיניות AI וממשל ארגוני", "אבטחת מידע בשימוש בכלי AI", "ChatGPT לארגונים", "Microsoft Copilot", "Google Gemini", "הנדסת פרומפטים"]}, {"@type": "Article", "headline": "אבטחת מידע ובינה מלאכותית בארגונים", "description": "איפה הסיכון האמיתי בשימוש ארגוני ב-AI: שישה סיכונים לפי שכיחות, למה הסוכן יורש את ההרשאות של המשתמש, מה לבדוק מול ספק ואילו בקרות באמת נאכפות.", "url": "https://aiworkshops.co.il/knowledge/ai-security", "inLanguage": "he", "datePublished": "2026-11-11", "dateModified": "2026-11-11", "author": {"@id": "https://aiworkshops.co.il/about#ben"}, "publisher": {"@id": "https://aiworkshops.co.il/#org"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://aiworkshops.co.il/knowledge/ai-security"}, "isPartOf": {"@type": "CollectionPage", "@id": "https://aiworkshops.co.il/knowledge"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "בית", "item": "https://aiworkshops.co.il/"}, {"@type": "ListItem", "position": 2, "name": "מרכז הידע", "item": "https://aiworkshops.co.il/knowledge"}, {"@type": "ListItem", "position": 3, "name": "אבטחת מידע", "item": "https://aiworkshops.co.il/knowledge/ai-security"}]}]}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">דילוג לתוכן</a>
+<header class="bar" id="bar">
+  <a class="brand" href="/">
+    <svg class="brand-mark" viewBox="0 0 24 24" fill="none" stroke="#E2563C" stroke-width="1.6" aria-hidden="true">
+      <rect x="4" y="8" width="16" height="12" rx="2"/><path d="M12 8V4"/><circle cx="12" cy="3" r="1.4"/>
+      <path d="M9 13h.01M15 13h.01M9.5 16.5h5"/>
+    </svg>
+    AI Workshops Israel
+  </a>
+  <button class="burger" id="burger" aria-label="תפריט" aria-expanded="false" aria-controls="menu">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <nav id="menu">
+    <a href="/workshops">סדנאות</a>
+    <a href="/tools">הכלים</a>
+    <a href="/knowledge" aria-current="page">מרכז ידע</a>
+    <a href="/case-studies">דוגמאות</a>
+    <a href="/about">אודות</a>
+    <a href="/contact">יצירת קשר</a>
+    <a href="/#reviews">ביקורות</a>
+  </nav>
+</header>
+<a class="wafab" href="https://wa.me/972544456795?text=%D7%94%D7%99%D7%99%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%20AI%20Workshops%20Israel%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%93%D7%91%D7%A8%20%D7%A2%D7%9C%20%D7%94%D7%98%D7%9E%D7%A2%D7%AA%20AI%20%D7%91%D7%90%D7%A8%D7%92%D7%95%D7%9F" target="_blank" rel="noopener" aria-label="לדבר איתנו בוואטסאפ">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.8 1.2 3c.2.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3Z"/><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>
+  <span class="wafab__tip">לדבר בוואטסאפ</span>
+</a>
+
+<nav class="crumbs" aria-label="פירורי לחם" id="top">
+  <ol>
+    <li><a href="/">בית</a></li>
+    <li aria-hidden="true">←</li>
+    <li><a href="/knowledge">מרכז הידע</a></li>
+    <li aria-hidden="true">←</li>
+    <li>אבטחת מידע</li>
+  </ol>
+</nav>
+
+<main id="main">
+<section class="phero">
+  <div class="wrap">
+    <p class="eyebrow">מרכז הידע · ממשל ואבטחה</p>
+    <h1>אבטחת מידע ובינה מלאכותית בארגונים</h1>
+    <p class="lede">רוב הסיכון אינו במודל אלא בצינור שסביבו: מי מחובר באיזה חשבון, לאילו קבצים יש למשתמש גישה, ומה קורה לפלט אחרי שהוא נוצר. ארגון שהרשאות הקבצים שלו רופפות יגלה את זה ברגע שיחבר עוזר ידע — לא כי הכלי נכשל, אלא כי הוא עשה בדיוק את מה שהתבקש.</p>
+    <div class="chips"><span class="chip">זמן קריאה <b>8</b> דקות</span><span class="chip">עודכן 11 בנובמבר 2026</span><span class="chip">למנמ״ר, אבטחת מידע והנהלה</span></div>
+    <div class="ctas">
+      <a class="btn btn-solid" href="https://wa.me/972544456795?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%93%D7%91%D7%A8%20%D7%A2%D7%9C%20%D7%90%D7%91%D7%98%D7%97%D7%AA%20%D7%9E%D7%99%D7%93%D7%A2%20%D7%91%D7%A9%D7%99%D7%9E%D7%95%D7%A9%20%D7%91-AI" target="_blank" rel="noopener">לדבר על הסיכונים אצלכם</a>
+      <a class="btn btn-ghost" href="/knowledge">למרכז הידע</a>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">מפת סיכונים</p>
+    <h2>שישה סיכונים, לפי כמה שהם באמת קורים</h2>
+    <p style="color:var(--concrete-2);max-width:68ch;margin-block-start:1rem">הדירוג כאן הוא לפי שכיחות בארגונים שעבדנו איתם, לא לפי חומרה תיאורטית. השניים הראשונים מייצרים את רוב האירועים בפועל.</p>
+
+    <div class="tbl-scroll">
+      <table>
+        <caption>הדירוג משתנה לפי בשלות הארגון. בארגון עם ניהול הרשאות הדוק, השורה השנייה יורדת משמעותית.</caption>
+        <thead><tr><th scope="col">הסיכון</th><th scope="col">איך זה קורה</th><th scope="col">הבקרה שעוצרת את זה</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">שימוש בחשבון פרטי</th><td>עובד מדביק מסמך ארגוני בכלי שהוא מחובר אליו באופן אישי, כי זה מה שפתוח אצלו</td><td>חשבון ארגוני לכולם, והגדרה מפורשת במדיניות</td></tr>
+          <tr><th scope="row">הרשאות רחבות מדי</th><td>עוזר ידע מחובר למאגר הקבצים ומחזיר לעובד מסמך שהוא יכול היה למצוא גם לבד — אבל לא היה אמור</td><td>ניקוי הרשאות לפני החיבור, לא אחריו</td></tr>
+          <tr><th scope="row">AI צללים</th><td>מחלקה רוכשת כלי בכרטיס אשראי בלי לעבור דרך רכש או IT</td><td>רשימת כלים מאושרת, ומסלול מהיר לאשר חדשים</td></tr>
+          <tr><th scope="row">הזרקת הוראות דרך תוכן</th><td>סוכן קורא מסמך או דף אינטרנט שמכיל הוראות מוסתרות, ומתייחס אליהן כאל בקשה</td><td>הפרדה בין תוכן להוראות, והגבלת הפעולות שהסוכן רשאי לבצע</td></tr>
+          <tr><th scope="row">פלט שגוי שיצא החוצה</th><td>תשובה שנשלחה ללקוח בלי בדיקת אדם</td><td>שלב אישור מוגדר בתהליך, לא בהנחיה כללית</td></tr>
+          <tr><th scope="row">תנאי הספק</th><td>הכלי נבחר לפי יכולת, ואיש לא קרא מה נעשה עם הנתונים</td><td>קריאת התיעוד הרשמי לפני הרכש, ותיעוד התאריך</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="band band--alt">
+  <div class="wrap">
+    <p class="eyebrow">הנקודה החשובה ביותר</p>
+    <h2>הסוכן יורש את ההרשאות של המשתמש</h2>
+    <p style="color:var(--concrete-2);max-width:68ch;margin-block-start:1rem">כשמחברים עוזר ידע או סוכן למאגרי המידע הארגוניים, הוא פועל בדרך כלל בהרשאות של מי שמפעיל אותו. זה תכנון נכון — וזו גם הסיבה שהחיבור חושף בעיה שהייתה קיימת קודם.</p>
+    <p style="color:var(--concrete-2);max-width:68ch;margin-block-start:1rem">ברוב הארגונים יש תיקיות ששותפו בשעתו "לכל מי שיש לו קישור", מסמכים שנשארו פתוחים אחרי פרויקט שנגמר, והרשאות שעבדו עם עובדים שהחליפו תפקיד. כל עוד מישהו היה צריך לדעת איפה לחפש, זה לא התפוצץ. עוזר ידע הופך את החיפוש לשאלה אחת בשפה טבעית — ואז מסמך השכר שנשכח בתיקייה משותפת חוזר כתשובה.</p>
+
+    <div class="note">
+      <h3>המסקנה המעשית</h3>
+      <p>ניקוי הרשאות הוא לא שלב שאפשר לדחות לאחרי הפיילוט. הוא תנאי מקדים לחיבור. בארגונים רבים זו העבודה הגדולה ביותר בפרויקט — ולרוב גם זו שמחזירה את הערך הגבוה ביותר, כי היא מתקנת חשיפה שהייתה קיימת גם בלי AI.</p>
+      <p>שיטה פשוטה להתחיל: בחרו את חמשת מקורות המידע שהסוכן יצטרך, ועברו עליהם אחד אחד עם מי שאחראי עליהם. אל תתחילו ממיפוי כלל־ארגוני — הוא לא ייגמר.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">מול הספק</p>
+    <h2>מה לבדוק לפני שמכניסים כלי</h2>
+    <p style="color:var(--concrete-2);max-width:68ch;margin-block-start:1rem">התשובות האלה קיימות בתיעוד הרשמי של הספקים הגדולים. כדאי לקרוא אותן שם, לתעד את התאריך, ולבדוק מחדש בכל חידוש התקשרות — הניסוחים משתנים.</p>
+
+    <ol style="color:var(--concrete-2);max-width:68ch;margin-block-start:1.2rem;line-height:1.9">
+      <li><strong style="color:var(--concrete)">האם הנתונים משמשים לאימון?</strong> בתוכניות עסקיות התשובה המוצהרת היא בדרך כלל לא. <a href="https://openai.com/index/business-data/" target="_blank" rel="noopener" style="color:var(--patina)">OpenAI</a> ו<a href="https://learn.microsoft.com/en-us/copilot/microsoft-365/enterprise-data-protection" target="_blank" rel="noopener" style="color:var(--patina)">מיקרוסופט</a> מצהירות על כך בתיעוד שלהן. בתוכניות צרכניות ההצהרה שונה.</li>
+      <li><strong style="color:var(--concrete)">כמה זמן נשמר מה שהוזן?</strong> שמירה לצורך ניטור שימוש לרעה היא נוהג מקובל, ויש לה משך מוגדר.</li>
+      <li><strong style="color:var(--concrete)">איפה הנתונים מעובדים גיאוגרפית?</strong> רלוונטי במיוחד אם חלה עליכם מגבלה חוזית או רגולטורית על העברת מידע.</li>
+      <li><strong style="color:var(--concrete)">מי בצד הספק יכול לגשת?</strong> ובאילו נסיבות.</li>
+      <li><strong style="color:var(--concrete)">אילו אישורים והסמכות יש?</strong> ומה בדיוק הן מכסות — הסמכה ברמת הארגון אינה הסמכה של כל מוצר.</li>
+      <li><strong style="color:var(--concrete)">מה קורה בסיום ההתקשרות?</strong> איך מוציאים את הנתונים ומה נמחק.</li>
+      <li><strong style="color:var(--concrete)">האם יש קבלני משנה?</strong> מודל שרץ אצל ספק שלישי הוא שרשרת, ולא תמיד היא גלויה בברירת מחדל.</li>
+    </ol>
+
+    <div class="note">
+      <h3>הסתייגות אחת חשובה</h3>
+      <p>הצהרה של ספק היא התחייבות חוזית, לא ערובה טכנית. היא מגדירה את מה שמותר לו לעשות ואת החשיפה שלכם אם לא יעמוד בה. במידע שבו דליפה היא בלתי הפיכה, הפתרון אינו הצהרה טובה יותר אלא ארכיטקטורה שבה המידע פשוט לא יוצא — מודל שרץ בסביבה שלכם.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band band--alt">
+  <div class="wrap">
+    <p class="eyebrow">בקרות</p>
+    <h2>מה באמת אפשר לאכוף</h2>
+    <div class="qa" style="margin-block-start:1.4rem">
+      <details open><summary>מה עובד</summary><div class="ans">חשבונות ארגוניים לכולם, כי הם מעבירים את השימוש לסביבה שבה יש תנאים, הרשאות ותיעוד. ניקוי הרשאות במקורות שהסוכן נוגע בהם. הגדרת שלב אישור אנושי לפני פלט שיוצא החוצה. ורשימת כלים מאושרת עם מסלול מהיר להוסיף אליה — כי הסעיף האחרון הוא מה שמונע AI צללים.</div></details>
+      <details><summary>מה עובד חלקית</summary><div class="ans">חסימת דומיינים ברשת הארגונית מקטינה שימוש מהמחשב הארגוני, ולא נוגעת בטלפון הפרטי. כלי מניעת דליפה מזהים דפוסים מוכרים כמו מספרי זהות או כרטיסי אשראי, ולא מזהים מסמך אסטרטגי. שתי הבקרות שוות את מה שהן נותנות, כל עוד לא מדווחים עליהן כעל פתרון מלא.</div></details>
+      <details><summary>מה לא עובד</summary><div class="ans">איסור גורף, שמעביר את השימוש לציוד פרטי ולכן גם מחוץ לטווח הראייה. והבטחה להנהלה שאפשר לנטר את כל מה שעובד מקליד — זה לא נכון, וכשזה יתברר זה יפגע באמון בכל השאר שאמרתם.</div></details>
+      <details><summary>איך מתעדפים</summary><div class="ans">לפי שתי שאלות: האם הנזק הפיך, וכמה סביר שזה יקרה. דליפה של מידע אישי אינה הפיכה ולכן מקבלת בקרה הדוקה גם אם ההסתברות נמוכה. טעות בניסוח מייל פנימי הפיכה לגמרי, ולא מצדיקה תהליך אישור שיהרוג את השימוש.</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">מסגרות</p>
+    <h2>על מה אפשר להישען</h2>
+    <p style="color:var(--concrete-2);max-width:68ch;margin-block-start:1rem"><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener" style="color:var(--patina)">מסגרת ניהול הסיכונים של NIST</a> היא נקודת פתיחה טובה: היא מחלקת את העבודה לארבע פונקציות — ממשל, מיפוי, מדידה וניהול — ושימושית בעיקר ככלי לארגון השיחה הפנימית ולחלוקת אחריות, לא כרשימת בקרות טכניות. לצדה קיים התקן ISO/IEC 42001 למערכת ניהול בינה מלאכותית, שרלוונטי בעיקר לארגונים שנדרשים להסמכה פורמלית מול לקוחות.</p>
+    <p style="color:var(--concrete-2);max-width:68ch;margin-block-start:1rem">בישראל חלים בנוסף דיני הגנת הפרטיות, והם נוגעים ישירות לשאלה אילו נתונים אישיים מותר להזין ולאן. זה תחום שמשתנה, והוא שאלה לייעוץ המשפטי שלכם ולא למדריך — העמוד הזה אינו ייעוץ משפטי.</p>
+
+    <div class="note">
+      <h3>אל תתחילו מהמסגרת</h3>
+      <p>ארגון שפותח את הדיון בבחירת מסגרת עבודה מבלה חודשיים בוועדות ולא מגן על שום דבר. הסדר שעובד הוא הפוך: בחרו תהליך אחד, נקו את ההרשאות שהוא נוגע בהן, הגדירו מה אסור להזין, ואז — כשיש כבר משהו לנהל — השתמשו במסגרת כדי לארגן את זה.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band band--alt" id="faq">
+  <div class="wrap">
+    <p class="eyebrow">שאלות שחוזרות</p>
+    <h2>על אבטחה ו-AI</h2>
+    <div class="qa" style="margin-block-start:1.4rem">
+      <details open><summary>מה עושים אם מידע כבר הוזן לכלי בחשבון פרטי?</summary><div class="ans">קודם מבררים מה בדיוק הוזן ומתי, ואז בודקים את אפשרויות המחיקה בחשבון הספציפי — בחלק מהכלים אפשר למחוק שיחות ולבקש מחיקת נתונים. במקביל מעריכים את החשיפה בפועל מול סוג המידע, ומחליטים אם יש חובת דיווח כלשהי. זו שיחה שצריכה לכלול את אבטחת המידע ואת הייעוץ המשפטי, ולא להיסגר בתוך המחלקה.</div></details>
+      <details><summary>האם מודל מקומי פותר את הבעיה?</summary><div class="ans">הוא פותר בעיה אחת — יציאת מידע אל מחוץ לארגון — ולא נוגע בשתי האחרות: הרשאות רחבות מדי ופלט שגוי שיוצא בלי בדיקה. מודל שרץ אצלכם עדיין יחזיר לעובד מסמך שלא היה אמור לראות, אם ההרשאות מאפשרות זאת. בנוסף הוא מוסיף עלות תחזוקה וצמצום ביכולות. הוא הפתרון הנכון כשיש מגבלה אמיתית על יציאת מידע, ולא כברירת מחדל.</div></details>
+      <details><summary>מה זו הזרקת הוראות, בפשטות?</summary><div class="ans">סוכן שקורא תוכן חיצוני — מייל, דף אינטרנט, קובץ שהגיע מלקוח — עלול להיתקל בטקסט שכתוב כהוראה ולא כתוכן, ולפעול לפיה. ככל שלסוכן יש יותר הרשאות לבצע פעולות, הנזק האפשרי גדל. ההגנה המעשית אינה לנסות לזהות כל ניסוח זדוני, אלא להגביל מראש את מה שהסוכן רשאי לעשות בלי אישור אדם.</div></details>
+      <details><summary>מי צריך להוביל את זה בארגון?</summary><div class="ans">אבטחת מידע מגדירה את המגבלות, מערכות מידע מבצעת, והבעלות על ההחלטה צריכה להיות של ההנהלה — כי רוב ההכרעות כאן הן עסקיות ולא טכניות. מה ששובר פרויקטים הוא כשאבטחת המידע נכנסת לתמונה רק אחרי שנבנה משהו שלא יכול לעבור.</div></details>
+      <details><summary>האם אפשר להתחיל בלי שהכול מסודר?</summary><div class="ans">כן, וזה גם מה שקורה ברוב הארגונים. הדרך היא לבחור תהליך שלא נוגע במידע הרגיש ביותר, לנקות את ההרשאות במקורות הספציפיים שלו, ולהתקדם. ההמתנה לסידור מלא של כל ההרשאות בארגון היא בפועל החלטה לא להתחיל.</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">להמשיך מכאן</p>
+    <h2>מדריכים קשורים</h2>
+    <div class="next">
+      <a href="/knowledge/ai-policy"><h3>מדיניות AI לעובדים</h3><p>ארבע השאלות שהמסמך חייב לענות עליהן, ומבנה למדיניות מלאה.</p><span class="arrow">מדריך ←</span></a>
+      <a href="/knowledge/ai-implementation"><h3>מדריך ההטמעה</h3><p>איפה שלב הגבולות יושב בתוך התהליך, ולמה לפני הבנייה.</p><span class="arrow">מדריך ←</span></a>
+      <a href="/cio-ciso-ai-workshop"><h3>AI למנמ״ר ולאבטחה</h3><p>הסדנה שמיועדת למי שצריך להגיד כן או לא, ולהסביר למה.</p><span class="arrow">3 שעות ←</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="ctaband" id="contact">
+  <div class="wrap">
+    <p class="eyebrow">צעד ראשון</p>
+    <h2>רוצים לדעת איפה החשיפה האמיתית אצלכם?</h2>
+    <p>שיחה עם מי שמחזיק את ההרשאות. נעבור על מקורות המידע שסוכן היה נוגע בהם, ונגיד לכם מה צריך להיסגר לפני.</p>
+    <div class="ctas">
+      <a class="btn btn-solid" href="https://wa.me/972544456795?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%93%D7%91%D7%A8%20%D7%A2%D7%9C%20%D7%90%D7%91%D7%98%D7%97%D7%AA%20%D7%9E%D7%99%D7%93%D7%A2%20%D7%91%D7%A9%D7%99%D7%9E%D7%95%D7%A9%20%D7%91-AI" target="_blank" rel="noopener">לדבר בוואטסאפ</a>
+      <a class="btn btn-ghost" href="/responsible-ai-workshop">AI אחראי: פרטיות והטיות</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a class="brand" href="/" style="margin-block-end:.8rem">
+          <svg class="brand-mark" viewBox="0 0 24 24" fill="none" stroke="#E2563C" stroke-width="1.6" aria-hidden="true">
+            <rect x="4" y="8" width="16" height="12" rx="2"/><path d="M12 8V4"/><circle cx="12" cy="3" r="1.4"/>
+            <path d="M9 13h.01M15 13h.01M9.5 16.5h5"/>
+          </svg>
+          AI Workshops Israel
+        </a>
+        <p style="color:var(--concrete-2);font-size:.9rem;max-width:30ch">הטמעת AI בארגונים: אבחון, בניית סוכנים, חיבור למערכות וממשל. חברה בת של AI Lectures.</p>
+      </div>
+      <div>
+        <h2>שירותים</h2>
+        <ul>
+          <li><a href="/workshops">כל הסדנאות</a></li>
+          <li><a href="/tools">ארגז הכלים</a></li>
+          <li><a href="/knowledge">מרכז הידע</a></li>
+          <li><a href="/ai-agents-workshop">סוכני AI ואוטומציה</a></li>
+          <li><a href="/#services">הטמעה ארגונית</a></li>
+          <li><a href="/case-studies">דוגמאות לפרויקטים</a></li>
+          <li><a href="/about">אודות</a></li>
+          <li><a href="/contact">יצירת קשר</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>סדנאות כלים</h2>
+        <ul>
+          <li><a href="/chatgpt-workshop">ChatGPT לארגונים</a></li>
+          <li><a href="/copilot-workshop">Microsoft Copilot 365</a></li>
+          <li><a href="/gemini-notebook-workshop">Gemini ו-Gemini Notebook</a></li>
+          <li><a href="/prompt-engineering-workshop">כתיבת פרומפטים</a></li>
+          <li><a href="/claude-code-workshop">Claude Code</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>לפי מחלקה</h2>
+        <ul>
+          <li><a href="/sales-ai-workshop">מכירות</a></li>
+          <li><a href="/customer-service-ai-workshop">שירות ומוקדים</a></li>
+          <li><a href="/hr-ai-workshop">משאבי אנוש</a></li>
+          <li><a href="/ai-for-managers-workshop">AI למנהלים</a></li>
+          <li><a href="/admin-ai-workshop">לשכה ואדמיניסטרציה</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>לפי ענף</h2>
+        <ul>
+          <li><a href="/healthcare-ai-workshop">ארגוני בריאות</a></li>
+          <li><a href="/education-ai-workshop">חינוך והוראה</a></li>
+          <li><a href="/construction-ai-workshop">בנייה ותשתיות</a></li>
+          <li><a href="/workshops">כל הסדנאות ←</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fnote">
+      <span>AI Workshops Israel · חברה בת של <a href="https://www.ailectures.co.il/">AI Lectures</a></span>
+      <span><a href="/privacy">תקנון פרטיות</a> · <a href="/accessibility">הצהרת נגישות</a></span>
+      <span>כל הזכויות שמורות</span>
+    </div>
+  </div>
+</footer>
+<script src="/site.js" defer></script>
+<script src="/page.js" defer></script>
+</body>
+</html>
