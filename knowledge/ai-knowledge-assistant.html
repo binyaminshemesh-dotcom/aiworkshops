@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>עוזר ידע ארגוני — איך בונים (RAG) | מרכז הידע</title>
+<meta name="description" content="איך בונים עוזר ידע שעונה מהמסמכים של הארגון: איך אחזור עובד, למה לא לאמן מודל, אוצרות מקורות, הרשאות באחזור וערכת בדיקה שמוודאת שזה עובד.">
+<link rel="canonical" href="https://aiworkshops.co.il/knowledge/ai-knowledge-assistant">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#0B1730">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="he_IL">
+<meta property="og:site_name" content="AI Workshops Israel">
+<meta property="og:url" content="https://aiworkshops.co.il/knowledge/ai-knowledge-assistant">
+<meta property="og:title" content="עוזר ידע ארגוני — איך בונים (RAG) | מרכז הידע">
+<meta property="og:description" content="איך בונים עוזר ידע שעונה מהמסמכים של הארגון: איך אחזור עובד, למה לא לאמן מודל, אוצרות מקורות, הרשאות באחזור וערכת בדיקה שמוודאת שזה עובד.">
+<meta property="og:image" content="https://aiworkshops.co.il/og-knowledge-ai-knowledge-assistant.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://aiworkshops.co.il/og-knowledge-ai-knowledge-assistant.jpg">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400..900&family=Space+Grotesk:wght@500;700&display=swap">
+<link rel="stylesheet" href="/site.css">
+<style>
+/* מרכז הידע: גוף מאמר — תיבת הערה, רשימות ממוספרות וטבלאות */
+.band .note{background:var(--ink);padding:1.3rem 1.35rem;border-block-start:2px solid var(--patina);margin-block-start:2rem}
+.band .note h3{font-size:1.1rem}
+.band .note p{color:var(--concrete-2);font-size:.95rem;margin-block-start:.5rem;max-width:66ch}
+.band ol{padding-inline-start:1.4rem;margin:0}
+.band ol li{margin-block-end:.9rem}
+.band ol li::marker{color:var(--minium-t);font-family:var(--font-m);font-size:.85rem}
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://aiworkshops.co.il/#org", "name": "AI Workshops Israel", "url": "https://aiworkshops.co.il/", "logo": "https://aiworkshops.co.il/logo.png", "description": "הטמעת AI בארגונים: אבחון תהליכים, בניית סוכנים, חיבור למערכות ארגוניות וממשל. חברה בת של AI Lectures.", "telephone": "+972-54-445-6795", "email": "ben@ailectures.co.il", "areaServed": {"@type": "Country", "name": "IL"}, "founder": {"@id": "https://aiworkshops.co.il/about#ben"}, "parentOrganization": {"@type": "Organization", "@id": "https://www.ailectures.co.il/#org", "name": "AI Lectures", "url": "https://www.ailectures.co.il/", "sameAs": ["https://www.linkedin.com/in/ailectures/", "https://www.youtube.com/@ailectures", "https://www.instagram.com/ailectures", "https://x.com/ailectures"]}, "contactPoint": {"@type": "ContactPoint", "telephone": "+972-54-445-6795", "email": "ben@ailectures.co.il", "contactType": "sales", "areaServed": "IL", "availableLanguage": ["he", "en"]}, "knowsAbout": ["הטמעת בינה מלאכותית בארגונים", "סדנאות AI לארגונים", "הכשרת עובדים ומנהלים לשימוש ב-AI", "בניית סוכני AI ואוטומציה", "מדיניות AI וממשל ארגוני", "אבטחת מידע בשימוש בכלי AI", "ChatGPT לארגונים", "Microsoft Copilot", "Google Gemini", "הנדסת פרומפטים"]}, {"@type": "Article", "headline": "איך בונים עוזר ידע ארגוני שעונה מהמסמכים שלכם?", "description": "איך בונים עוזר ידע שעונה מהמסמכים של הארגון: איך אחזור עובד, למה לא לאמן מודל, אוצרות מקורות, הרשאות באחזור וערכת בדיקה שמוודאת שזה עובד.", "url": "https://aiworkshops.co.il/knowledge/ai-knowledge-assistant", "inLanguage": "he", "datePublished": "2026-11-11", "dateModified": "2026-11-11", "author": {"@id": "https://aiworkshops.co.il/about#ben"}, "publisher": {"@id": "https://aiworkshops.co.il/#org"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://aiworkshops.co.il/knowledge/ai-knowledge-assistant"}, "isPartOf": {"@type": "CollectionPage", "@id": "https://aiworkshops.co.il/knowledge"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "בית", "item": "https://aiworkshops.co.il/"}, {"@type": "ListItem", "position": 2, "name": "מרכז הידע", "item": "https://aiworkshops.co.il/knowledge"}, {"@type": "ListItem", "position": 3, "name": "עוזר ידע ארגוני", "item": "https://aiworkshops.co.il/knowledge/ai-knowledge-assistant"}]}]}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">דילוג לתוכן</a>
+<header class="bar" id="bar">
+  <a class="brand" href="/">
+    <svg class="brand-mark" viewBox="0 0 24 24" fill="none" stroke="#E2563C" stroke-width="1.6" aria-hidden="true">
+      <rect x="4" y="8" width="16" height="12" rx="2"/><path d="M12 8V4"/><circle cx="12" cy="3" r="1.4"/>
+      <path d="M9 13h.01M15 13h.01M9.5 16.5h5"/>
+    </svg>
+    AI Workshops Israel
+  </a>
+  <button class="burger" id="burger" aria-label="תפריט" aria-expanded="false" aria-controls="menu">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <nav id="menu">
+    <a href="/workshops">סדנאות</a>
+    <a href="/tools">הכלים</a>
+    <a href="/knowledge" aria-current="page">מרכז ידע</a>
+    <a href="/case-studies">דוגמאות</a>
+    <a href="/about">אודות</a>
+    <a href="/contact">יצירת קשר</a>
+    <a href="/#reviews">ביקורות</a>
+  </nav>
+</header>
+<a class="wafab" href="https://wa.me/972544456795?text=%D7%94%D7%99%D7%99%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%20AI%20Workshops%20Israel%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%93%D7%91%D7%A8%20%D7%A2%D7%9C%20%D7%94%D7%98%D7%9E%D7%A2%D7%AA%20AI%20%D7%91%D7%90%D7%A8%D7%92%D7%95%D7%9F" target="_blank" rel="noopener" aria-label="לדבר איתנו בוואטסאפ">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.8 1.2 3c.2.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3Z"/><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>
+  <span class="wafab__tip">לדבר בוואטסאפ</span>
+</a>
+
+<nav class="crumbs" aria-label="פירורי לחם" id="top">
+  <ol>
+    <li><a href="/">בית</a></li>
+    <li aria-hidden="true">←</li>
+    <li><a href="/knowledge">מרכז הידע</a></li>
+    <li aria-hidden="true">←</li>
+    <li>עוזר ידע ארגוני</li>
+  </ol>
+</nav>
+
+<main id="main">
+<section class="phero">
+  <div class="wrap">
+    <p class="eyebrow">מרכז הידע · סוכנים ואוטומציה</p>
+    <h1>איך בונים עוזר ידע ארגוני שעונה מהמסמכים שלכם?</h1>
+    <p class="lede">לא מאמנים מודל על המסמכים שלכם. בונים שכבת אחזור שמוצאת את הקטע הרלוונטי ומגישה אותו למודל, עם הוראה לענות רק ממנו ולצטט את המקור. רוב הכישלונות בפרויקטים האלה אינם בעיית מודל אלא בעיית מקורות: נהלים סותרים, גרסאות ישנות שאיש לא מחק, והרשאות שלא נוקו.</p>
+    <div class="chips"><span class="chip">זמן קריאה <b>8</b> דקות</span><span class="chip">עודכן 11 בנובמבר 2026</span><span class="chip">לידע ארגוני, IT ותפעול</span></div>
+    <div class="ctas">
+      <a class="btn btn-solid" href="https://wa.me/972544456795?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%93%D7%91%D7%A8%20%D7%A2%D7%9C%20%D7%A2%D7%95%D7%96%D7%A8%20%D7%99%D7%93%D7%A2%20%D7%90%D7%A8%D7%92%D7%95%D7%A0%D7%99" target="_blank" rel="noopener">לדבר על עוזר ידע אצלכם</a>
+      <a class="btn btn-ghost" href="/knowledge">למרכז הידע</a>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">איך זה עובד</p>
+    <h2>ארבעה שלבים, בלי ז׳רגון</h2>
+    <p style="color:var(--concrete-2);max-width:68ch;margin-block-start:1rem">השיטה נקראת אחזור מוגבר, ובאנגלית RAG. התיאור המלא שלה קצר:</p>
+    <ol style="color:var(--concrete-2);max-width:68ch;margin-block-start:1.2rem;line-height:1.9">
+      <li><strong style="color:var(--concrete)">פירוק</strong> — המסמכים שלכם נחתכים לקטעים בגודל סביר, כך שקטע אחד מכיל רעיון שלם ולא חצי משפט.</li>
+      <li><strong style="color:var(--concrete)">אינדוקס</strong> — כל קטע נשמר עם ייצוג מספרי שמאפשר למצוא אותו לפי משמעות ולא לפי מילה מדויקת.</li>
+      <li><strong style="color:var(--concrete)">אחזור</strong> — כשמישהו שואל, המערכת מחזירה את הקטעים הרלוונטיים ביותר — בדרך כלל שלושה עד עשרה.</li>
+      <li><strong style="color:var(--concrete)">מענה</strong> — הקטעים נשלחים למודל עם הוראה: ענה רק מתוך החומר הזה, צטט מאיפה, ואם אין תשובה — תגיד שאין.</li>
+    </ol>
+    <p style="color:var(--concrete-2);max-width:68ch;margin-block-start:1.4rem">זה הכול. אין כאן אימון, אין למידה מתמשכת, והמודל אינו "זוכר" את המסמכים שלכם בין שאלה לשאלה. בכל פעם הוא מקבל את החומר מחדש.</p>
+  </div>
+</section>
+
+<section class="band band--alt">
+  <div class="wrap">
+    <p class="eyebrow">הבהרה</p>
+    <h2>למה לא "לאמן מודל על הנתונים שלנו"</h2>
+    <p style="color:var(--concrete-2);max-width:68ch;margin-block-start:1rem">זו הבקשה שעולה כמעט בכל שיחה ראשונה, והיא כמעט תמיד לא מה שצריך. ארבע סיבות, וכולן מעשיות:</p>
+
+    <div class="tbl-scroll">
+      <table>
+        <caption>אימון ייעודי מצדיק את עצמו כשרוצים לשנות סגנון או התנהגות — לא כשרוצים שהמודל יידע עובדות.</caption>
+        <thead><tr><th scope="col">אימון על הנתונים</th><th scope="col">אחזור מהמסמכים</th></tr></thead>
+        <tbody>
+          <tr><td>כל עדכון נוהל דורש אימון מחדש</td><td>מחליפים קובץ, והתשובה מתעדכנת מיד</td></tr>
+          <tr><td>אי אפשר לדעת מאיפה הגיעה תשובה</td><td>כל תשובה מגיעה עם ציטוט מקור</td></tr>
+          <tr><td>הרשאות נמחקות — המודל יודע הכול לכולם</td><td>האחזור מסונן לפי הרשאות השואל</td></tr>
+          <tr><td>עלות גבוהה, מומחיות נדרשת</td><td>נבנה על יכולות שכבר קיימות ברישיונות שלכם</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note">
+      <h3>מתי אימון כן רלוונטי</h3>
+      <p>כשרוצים לשנות את <em>אופן</em> המענה ולא את תוכנו — ניסוח בקול מסוים, פורמט פלט קבוע, או התמחות בשפה מקצועית צרה מאוד. גם אז זה שלב מאוחר, אחרי שהאחזור כבר עובד ויודעים בדיוק מה חסר.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">הבעיה האמיתית</p>
+    <h2>המקורות, לא הטכנולוגיה</h2>
+    <p style="color:var(--concrete-2);max-width:68ch;margin-block-start:1rem">כשעוזר ידע מחזיר תשובות גרועות, הסיבה כמעט תמיד נמצאת בחומר ולא במודל. ארגון שמחבר את כל כונן המסמכים שלו מקבל בדיוק את מה שיש שם — כולל הטיוטות, הגרסאות הישנות והנהלים שסותרים זה את זה.</p>
+
+    <div class="tbl-scroll">
+      <table>
+        <caption>הבדיקה הזאת היא רוב העבודה בפרויקט, והיא גם מה שמשאיר ערך גם אם העוזר יוחלף.</caption>
+        <thead><tr><th scope="col">מה מוצאים</th><th scope="col">מה זה עושה לתשובות</th><th scope="col">מה עושים</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">שתי גרסאות של אותו נוהל</th><td>העוזר יחזיר את אחת מהן, ולא בהכרח את העדכנית</td><td>מוחקים או מארכבים. לא מסתמכים על תאריך בשם הקובץ.</td></tr>
+          <tr><th scope="row">טיוטות לצד מסמכים מאושרים</th><td>תשובות שנשמעות סמכותיות ומבוססות על משהו שלא אושר</td><td>מפרידים לתיקייה שלא נכנסת לאינדקס</td></tr>
+          <tr><th scope="row">מסמכים בלי בעלים</th><td>אף אחד לא יודע אם הם עדיין נכונים</td><td>מקצים בעלים, או מוציאים מהמאגר</td></tr>
+          <tr><th scope="row">סריקות ותמונות בלי טקסט</th><td>לא נמצאים באחזור כלל, והמשתמש חושב שאין תשובה</td><td>מריצים זיהוי תווים, או מסמנים כפער ידוע</td></tr>
+          <tr><th scope="row">ידע שקיים רק בראש של אנשים</th><td>העוזר לא יידע לענות, וזה ייראה כמו כשל טכני</td><td>כותבים את עשרים השאלות הנפוצות כמסמך. זה לבד מחזיר ערך.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="band band--alt">
+  <div class="wrap">
+    <p class="eyebrow">בקרה</p>
+    <h2>הרשאות וטעויות</h2>
+    <div class="qa" style="margin-block-start:1.4rem">
+      <details open><summary>האחזור חייב לכבד הרשאות</summary><div class="ans">אם העוזר מחפש על כל המאגר ואז מסתיר תוצאות, הוא כבר קרא אותן — וניסוח חכם של שאלה עלול לדלות מהן מידע. הסינון צריך לקרות בשלב האחזור עצמו, לפי ההרשאות של מי ששואל. זו גם הסיבה שניקוי ההרשאות קודם לחיבור, כמפורט ב<a href="/knowledge/ai-security" style="color:var(--patina)">מדריך אבטחת המידע</a>.</div></details>
+      <details><summary>ציטוט מקור אינו קישוט</summary><div class="ans">הוא הבקרה העיקרית. כשכל תשובה מגיעה עם שם המסמך והקטע, המשתמש יכול לאמת בשתי שניות, ואתם מקבלים דרך לזהות מסמכים בעייתיים לפי מה שחוזר בתשובות שגויות. עוזר בלי ציטוטים הוא עוזר שאי אפשר לתקן.</div></details>
+      <details><summary>"אני לא יודע" היא תשובה תקינה</summary><div class="ans">צריך להגדיר במפורש שכשאין כיסוי בחומר, המענה הוא הצהרה על כך ולא ניחוש. זה מוריד את שיעור השימושיות הנראה לעין ומעלה את האמון בפועל — ומשתמש שקיבל פעם אחת תשובה בטוחה ושגויה מפסיק להאמין לכל השאר.</div></details>
+      <details><summary>לא כל שאלה היא שאלת ידע</summary><div class="ans">"כמה ימי חופשה נשארו לי" היא שאלת מערכת, לא שאלת מסמך. עוזר ידע ינסה לענות עליה מהנוהל ויחזיר את הכלל הכללי במקום את המספר. כדאי להגדיר מראש אילו סוגי שאלות מנותבות למקום אחר.</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">בדיקה</p>
+    <h2>איך יודעים שזה עובד</h2>
+    <p style="color:var(--concrete-2);max-width:68ch;margin-block-start:1rem">לפני ההשקה בונים ערכת בדיקה: שלושים שאלות אמיתיות שעובדים שואלים, עם התשובה הנכונה לצד כל אחת. את הרשימה הזאת מריצים לפני כל שינוי משמעותי — אחרי שמוסיפים מקורות, אחרי שמחליפים מודל, אחרי שמשנים את אופן הפירוק.</p>
+
+    <div class="tbl-scroll">
+      <table>
+        <caption>שלוש השורות הראשונות נבדקות ידנית על המדגם. אין קיצור דרך אמין לכך.</caption>
+        <thead><tr><th scope="col">מה בודקים</th><th scope="col">השאלה שנשאלת</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">דיוק</th><td>האם התשובה נכונה לפי המסמך?</td></tr>
+          <tr><th scope="row">ביסוס</th><td>האם הציטוט באמת תומך בתשובה, או שהוא מסמך אחר שנראה דומה?</td></tr>
+          <tr><th scope="row">כיסוי</th><td>באיזה אחוז מהשאלות נמצאה בכלל תשובה בחומר?</td></tr>
+          <tr><th scope="row">סירוב נכון</th><td>כששואלים משהו שאין עליו חומר — האם הוא אומר שאין, או ממציא?</td></tr>
+          <tr><th scope="row">הרשאות</th><td>האם משתמש בלי הרשאה מקבל תשובה ממסמך שאסור לו?</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note">
+      <h3>השורה האחרונה נבדקת בנפרד ולפני ההשקה</h3>
+      <p>יוצרים משתמש בדיקה עם הרשאות מצומצמות, שואלים אותו שאלות שהתשובה עליהן נמצאת במסמך שאסור לו, ובודקים מה חוזר. זו בדיקה של עשר דקות שמונעת את האירוע הגרוע ביותר שיכול לקרות בפרויקט כזה.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band band--alt">
+  <div class="wrap">
+    <p class="eyebrow">גבולות</p>
+    <h2>מתי עוזר ידע הוא לא הפתרון</h2>
+    <ol style="color:var(--concrete-2);max-width:68ch;margin-block-start:1.2rem;line-height:1.9">
+      <li><strong style="color:var(--concrete)">כשהידע לא כתוב.</strong> אם רוב התשובות נמצאות אצל שלושה אנשים ולא במסמכים, הפרויקט הנכון הוא כתיבה — ורק אחריו עוזר.</li>
+      <li><strong style="color:var(--concrete)">כשהשאלות הן שאילתות נתונים.</strong> מספרים שמשתנים כל יום שייכים למערכת ולדוח, לא לאחזור ממסמכים.</li>
+      <li><strong style="color:var(--concrete)">כשנדרשת ודאות מוחלטת.</strong> בהקשרים שבהם תשובה שגויה אחת היא אירוע — רפואי, בטיחותי, משפטי מחייב — התפקיד הנכון הוא הפניה למקור ולא ניסוח תשובה.</li>
+      <li><strong style="color:var(--concrete)">כשיש פחות מכמה מאות מסמכים רלוונטיים.</strong> לפעמים חיפוש טוב ועמוד מרוכז עם עשרים השאלות הנפוצות פותרים את אותה בעיה בעשירית מהמאמץ.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="band" id="faq">
+  <div class="wrap">
+    <p class="eyebrow">שאלות שחוזרות</p>
+    <h2>על עוזרי ידע ארגוניים</h2>
+    <div class="qa" style="margin-block-start:1.4rem">
+      <details open><summary>כמה מסמכים צריך כדי שזה ישתלם?</summary><div class="ans">אין מספר קסם, אבל הכלל המעשי הוא שהערך מתחיל כשחיפוש ידני כבר לא עובד — כלומר כשהחומר מפוזר על פני כמה מערכות, או שהוא גדול מדי מכדי שעובד חדש ימצא בו את דרכו. מתחת לזה, עמוד שאלות נפוצות מתוחזק היטב נותן תוצאה דומה בהרבה פחות עבודה.</div></details>
+      <details><summary>האם המידע יוצא מהארגון?</summary><div class="ans">תלוי בארכיטקטורה שבחרתם. בתצורות ארגוניות של הספקים הגדולים יש הצהרות מפורשות על כך שנתוני לקוחות עסקיים אינם משמשים לאימון — כדאי לקרוא אותן במקור ובתאריך. וכשיש מגבלה שאוסרת יציאה בכלל, מריצים את מנוע האחזור ואת המודל בסביבה שלכם. את ההחלטה הזאת מקבלים בשלב הגבולות, לפני הבנייה.</div></details>
+      <details><summary>למה הוא עונה נכון בדמו ולא בייצור?</summary><div class="ans">כי הדמו רץ על עשרה מסמכים נקיים שמישהו בחר, והייצור רץ על אלפי קבצים אמיתיים עם גרסאות כפולות. זה לא כשל של הכלי אלא הבדל בחומר — ובדיוק הסיבה שאוצרות המקורות היא רוב העבודה.</div></details>
+      <details><summary>מי צריך לתחזק את זה?</summary><div class="ans">צריך בעלים לתוכן, לא רק ל-IT. מישהו שאחראי לוודא שמסמכים מיושנים יורדים מהאינדקס ושפערים שעלו מהשאלות נכתבים. בלי התפקיד הזה האיכות יורדת בהדרגה, ואף אחד לא שם לב עד שעובדים מפסיקים להשתמש.</div></details>
+      <details><summary>אפשר לחבר את זה לסוכן?</summary><div class="ans">כן, וזה שילוב טבעי: עוזר הידע הוא המקור שממנו הסוכן שואב כשהוא צריך לדעת מה הנוהל. ההרחבה על בניית סוכנים ועל הגבולות שלהם נמצאת ב<a href="/knowledge/ai-agents-guide" style="color:var(--patina)">מדריך סוכני ה-AI</a>.</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="band band--alt">
+  <div class="wrap">
+    <p class="eyebrow">להמשיך מכאן</p>
+    <h2>מדריכים קשורים</h2>
+    <div class="next">
+      <a href="/knowledge/ai-agents-guide"><h3>סוכני AI בארגונים</h3><p>מה ההבדל מצ׳אטבוט, אילו דפוסים עובדים ואיך מגבילים פעולות.</p><span class="arrow">מדריך ←</span></a>
+      <a href="/knowledge/ai-security"><h3>אבטחת מידע ו-AI</h3><p>למה ניקוי ההרשאות קודם לחיבור, ולא אחריו.</p><span class="arrow">מדריך ←</span></a>
+      <a href="/rag-knowledge-workshop"><h3>סדנת עוזרי ידע ו-RAG</h3><p>בונים עוזר על המסמכים שלכם, כולל ערכת הבדיקה.</p><span class="arrow">3 שעות ←</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="ctaband" id="contact">
+  <div class="wrap">
+    <p class="eyebrow">צעד ראשון</p>
+    <h2>יש לכם ידע שאף אחד לא מוצא?</h2>
+    <p>ספרו לנו איפה הוא יושב ומי מחפש אותו. נגיד לכם אם זה מקרה לעוזר ידע או לסדר בתיקיות.</p>
+    <div class="ctas">
+      <a class="btn btn-solid" href="https://wa.me/972544456795?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%93%D7%91%D7%A8%20%D7%A2%D7%9C%20%D7%A2%D7%95%D7%96%D7%A8%20%D7%99%D7%93%D7%A2%20%D7%90%D7%A8%D7%92%D7%95%D7%A0%D7%99" target="_blank" rel="noopener">לדבר בוואטסאפ</a>
+      <a class="btn btn-ghost" href="/knowledge/ai-implementation">מדריך ההטמעה</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a class="brand" href="/" style="margin-block-end:.8rem">
+          <svg class="brand-mark" viewBox="0 0 24 24" fill="none" stroke="#E2563C" stroke-width="1.6" aria-hidden="true">
+            <rect x="4" y="8" width="16" height="12" rx="2"/><path d="M12 8V4"/><circle cx="12" cy="3" r="1.4"/>
+            <path d="M9 13h.01M15 13h.01M9.5 16.5h5"/>
+          </svg>
+          AI Workshops Israel
+        </a>
+        <p style="color:var(--concrete-2);font-size:.9rem;max-width:30ch">הטמעת AI בארגונים: אבחון, בניית סוכנים, חיבור למערכות וממשל. חברה בת של AI Lectures.</p>
+      </div>
+      <div>
+        <h2>שירותים</h2>
+        <ul>
+          <li><a href="/workshops">כל הסדנאות</a></li>
+          <li><a href="/tools">ארגז הכלים</a></li>
+          <li><a href="/knowledge">מרכז הידע</a></li>
+          <li><a href="/ai-agents-workshop">סוכני AI ואוטומציה</a></li>
+          <li><a href="/#services">הטמעה ארגונית</a></li>
+          <li><a href="/case-studies">דוגמאות לפרויקטים</a></li>
+          <li><a href="/about">אודות</a></li>
+          <li><a href="/contact">יצירת קשר</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>סדנאות כלים</h2>
+        <ul>
+          <li><a href="/chatgpt-workshop">ChatGPT לארגונים</a></li>
+          <li><a href="/copilot-workshop">Microsoft Copilot 365</a></li>
+          <li><a href="/gemini-notebook-workshop">Gemini ו-Gemini Notebook</a></li>
+          <li><a href="/prompt-engineering-workshop">כתיבת פרומפטים</a></li>
+          <li><a href="/claude-code-workshop">Claude Code</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>לפי מחלקה</h2>
+        <ul>
+          <li><a href="/sales-ai-workshop">מכירות</a></li>
+          <li><a href="/customer-service-ai-workshop">שירות ומוקדים</a></li>
+          <li><a href="/hr-ai-workshop">משאבי אנוש</a></li>
+          <li><a href="/ai-for-managers-workshop">AI למנהלים</a></li>
+          <li><a href="/admin-ai-workshop">לשכה ואדמיניסטרציה</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>לפי ענף</h2>
+        <ul>
+          <li><a href="/healthcare-ai-workshop">ארגוני בריאות</a></li>
+          <li><a href="/education-ai-workshop">חינוך והוראה</a></li>
+          <li><a href="/construction-ai-workshop">בנייה ותשתיות</a></li>
+          <li><a href="/workshops">כל הסדנאות ←</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fnote">
+      <span>AI Workshops Israel · חברה בת של <a href="https://www.ailectures.co.il/">AI Lectures</a></span>
+      <span><a href="/privacy">תקנון פרטיות</a> · <a href="/accessibility">הצהרת נגישות</a></span>
+      <span>כל הזכויות שמורות</span>
+    </div>
+  </div>
+</footer>
+<script src="/site.js" defer></script>
+<script src="/page.js" defer></script>
+</body>
+</html>
